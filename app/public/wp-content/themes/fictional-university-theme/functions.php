@@ -7,7 +7,6 @@ function university_files(){
 
 // specific action: call university_files() func at a specific moment (hook - wp_enqueue_scripts)
 add_action('wp_enqueue_scripts', 'university_files');
-
 ?>
 
 
