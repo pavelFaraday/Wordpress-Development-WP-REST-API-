@@ -1,0 +1,60 @@
+[01-Aug-2024 05:51:51 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "get_stylesheet_uri" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php:4
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): university_files('')
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/script-loader.php(2263): do_action('wp_enqueue_scri...')
+#4 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts('')
+#5 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/general-template.php(3065): do_action('wp_head')
+#8 /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/header.php(4): wp_head()
+#9 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template.php(810): require_once('/Users/macuser/...')
+#10 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template.php(745): load_template('/Users/macuser/...', true, Array)
+#11 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#12 /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php(3): get_header()
+#13 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include('/Users/macuser/...')
+#14 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#15 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#16 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 4
+[01-Aug-2024 05:52:02 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "get_stylesheet_uri" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php:4
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): university_files('')
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/script-loader.php(2263): do_action('wp_enqueue_scri...')
+#4 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts('')
+#5 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/general-template.php(3065): do_action('wp_head')
+#8 /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/header.php(4): wp_head()
+#9 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template.php(810): require_once('/Users/macuser/...')
+#10 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template.php(745): load_template('/Users/macuser/...', true, Array)
+#11 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#12 /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php(3): get_header()
+#13 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include('/Users/macuser/...')
+#14 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#15 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#16 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 4
+[01-Aug-2024 05:52:04 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "get_stylesheet_uri" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php:4
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): university_files('')
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/script-loader.php(2263): do_action('wp_enqueue_scri...')
+#4 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts('')
+#5 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#6 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#7 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/general-template.php(3065): do_action('wp_head')
+#8 /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/header.php(4): wp_head()
+#9 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template.php(810): require_once('/Users/macuser/...')
+#10 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template.php(745): load_template('/Users/macuser/...', true, Array)
+#11 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#12 /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php(3): get_header()
+#13 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include('/Users/macuser/...')
+#14 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#15 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#16 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 4
