@@ -58,3 +58,4 @@ Stack trace:
 #15 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
 #16 {main}
   thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 4
+[01-Aug-2024 09:56:58 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-customize-widgets.php on line 905

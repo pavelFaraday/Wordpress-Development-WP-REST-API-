@@ -26,5 +26,15 @@ Registers the style if source provided (does NOT overwrite) and enqueues.
 
 #### `get_stylesheet_uri()`
 Automatically Retrieves stylesheet URI for the active theme.
-
 The stylesheet file name must be 'style.css' which is appended to the stylesheet directory URI path.
+
+#### `get_theme_file_uri()`
+Retrieves the URL of a file in the theme.
+> **Example:** `get_theme_file_uri('/build/style-index.css')`
+
+#### `wp_enqueue_script()`
+
+Registers the script if `$src` provided (does NOT overwrite), and enqueues it.
+
+> **Example:** 
+`wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);`
