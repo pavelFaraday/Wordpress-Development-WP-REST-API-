@@ -62,5 +62,23 @@ If attached to a hook, it must be **`after_setup_theme`**.
 
 #### `site_url()`
 Retrieves the Root URL for the current site. Returns the ‘site_url’ option with the appropriate protocol, ‘https’ if is_ssl() and ‘http’ otherwise.
-
 > **Example:** `<li><a href="<?php echo site_url('/about-us') ?>">About Us</a></li>`
+
+#### `the_title()` 
+Displays or retrieves the current post title with optional markup.
+> **Example:** `<p><?php echo the_title(); ?></p>`
+
+#### `get_the_title()`
+Retrieves the post title.
+If the post is protected and the visitor is not an admin, then "Protected" will be inserted before the post title. If the post is private, then "Private" will be inserted before the post title.
+
+#### `get_the_ID()`
+Retrieves the ID of the current item (post or page) in the WordPress Loop.
+> **Example:** `<?php echo get_the_ID(); ?> // 16 integer` 
+
+#### `wp_get_post_parent_id()`
+Returns the ID of the post’s parent, if it exists, otherwise returns 0.
+
+#### `get_permalink()`
+Retrieves the full permalink for the current post or post ID.
+
