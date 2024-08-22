@@ -95,6 +95,15 @@ Retrieves the full permalink for the current post or post ID.
 
 Retrieves or displays a list of pages hierarchically (or hierarchical post type items) in **list (li)** format.
 
+**Example:**
+```
+wp_list_pages(array(
+    "title_li" => NULL,
+    "child_of" => $findChildrenOf,
+    "sort_column" => "menu_order"
+));
+```
+
 #### `get_pages();`
 Retrieves an **array** of pages (or hierarchical post type items).  
 
