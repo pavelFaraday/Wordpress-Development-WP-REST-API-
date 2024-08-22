@@ -90,3 +90,12 @@ Retrieves the full permalink for the current post or post ID.
 
 > **Example 1:** `the_title()` VS `get_the_title`
 > **Example 2:** `the_ID()` VS `get_the_ID()`
+
+#### `wp_list_pages();`
+
+Retrieves or displays a list of pages hierarchically (or hierarchical post type items) in **list (li)** format.
+
+#### `get_pages();`
+Retrieves an **array** of pages (or hierarchical post type items).  
+
+*Very similar to `wp_list_pages();`. The only difference is that `wp_list_pages();` --> will handle <u>outputting the pages onto the screen</u>, whereas `get_pages();` --> just returns the pages in memory.*
