@@ -108,3 +108,34 @@ wp_list_pages(array(
 Retrieves an **array** of pages (or hierarchical post type items).  
 
 *Very similar to `wp_list_pages();`. The only difference is that `wp_list_pages();` --> will handle <u>outputting the pages onto the screen</u>, whereas `get_pages();` --> just returns the pages in memory.*
+
+#### `language_attributes();`
+Displays the language attributes for the ‘html’ tag.
+
+**Example:** 
+```
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+```
+
+#### `bloginfo()`
+Displays different information about the current site.
+
+> **Example 1:** `<meta charset="<?php bloginfo('charset'); ?>">` 
+> **Example 2:** `<title><?php bloginfo('name') ?></title>`
+> **Example 3:** `<?php bloginfo( 'description' ); ?>`
+> **Example 4:** `<?php bloginfo( 'url' ); ?>`
+
+**Example 5:** 
+```
+<h1><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+<h3><?php bloginfo( 'description' ); ?></h3>
+```
+
+#### `body_class();`
+Displays information about the current site.
+
+> **Example:** ` <body <?php body_class(); ?>>`
+> **Result: class="page-name blog child_or_parent_Page logged-in page-id admin-bar  customize-support"**
+

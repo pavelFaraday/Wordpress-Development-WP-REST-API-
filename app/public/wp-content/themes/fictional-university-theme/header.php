@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html>
+<!-- lang="en-ES" -->
+<html <?php language_attributes(); ?>>
   <head>
+    <!-- For the RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta charset="UTF-8"> -->
+    <meta charset="<?php bloginfo('charset'); ?>">
     <?php wp_head(); ?>
+    <title><?php bloginfo('name') ?></title>
   </head>
-  <body>
+  <!-- Displays the class names for the body element: ---class="home blog logged-in admin-bar  customize-support" cz-shortcut-listen="true"--- -->
+  <body <?php body_class(); ?>>
     <header class="site-header">
       <div class="container">
         <h1 class="school-logo-text float-left">
