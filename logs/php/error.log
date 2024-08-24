@@ -60,3 +60,16 @@ Stack trace:
   thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 4
 [01-Aug-2024 09:56:58 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-customize-widgets.php on line 905
 [20-Aug-2024 05:40:19 UTC] PHP Parse error:  syntax error, unexpected token "=" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 22
+[24-Aug-2024 10:14:50 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-customize-widgets.php on line 905
+[24-Aug-2024 10:17:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 14 and exactly 2 expected in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php:136
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php(14): register_nav_menu('headerMenuLocat...')
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): university_features('')
+#2 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /Users/macuser/Local Sites/fictional-university/app/public/wp-settings.php(678): do_action('after_setup_the...')
+#5 /Users/macuser/Local Sites/fictional-university/app/public/wp-config.php(103): require_once('/Users/macuser/...')
+#6 /Users/macuser/Local Sites/fictional-university/app/public/wp-load.php(50): require_once('/Users/macuser/...')
+#7 /Users/macuser/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/macuser/...')
+#8 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php on line 136
