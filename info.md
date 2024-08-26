@@ -72,6 +72,19 @@ Displays or retrieves the current post title with optional markup.
 Retrieves the post title.
 If the post is protected and the visitor is not an admin, then "Protected" will be inserted before the post title. If the post is private, then "Private" will be inserted before the post title.
 
+#### `the_content();`
+Displays the post content.
+
+#### `the_excerpt();`
+Displays the post excerpt.
+
+#### `the_author_posts_link();`
+Displays an HTML link with Author name to the author page of the current post’s author.
+
+#### `get_the_category_list()`
+Retrieves category list for a post in either HTML list or custom format.
+> **Example:** `<p><?php echo get_the_category_list(', '); ?></p>`
+
 #### `get_the_ID()`
 Retrieves the ID of the current item (post or page) in the WordPress Loop.
 > **Example:** `<?php echo get_the_ID(); ?> // 16 integer` 
