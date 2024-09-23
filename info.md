@@ -188,3 +188,7 @@ add_action('after_setup_theme', 'university_features');
 ```
 ---
 
+#### `pagination_list()`
+Create pagination is posts;
+
+

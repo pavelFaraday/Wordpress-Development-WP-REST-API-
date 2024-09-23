@@ -73,3 +73,8 @@ Stack trace:
 #7 /Users/macuser/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/macuser/...')
 #8 {main}
   thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php on line 136
+[23-Sep-2024 07:18:29 UTC] PHP Warning:  Undefined variable $theParent in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 20
+[23-Sep-2024 07:18:29 UTC] PHP Warning:  Undefined variable $theParent in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 21
+[23-Sep-2024 07:19:18 UTC] PHP Warning:  Undefined variable $theParent in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 20
+[23-Sep-2024 07:19:45 UTC] PHP Warning:  Undefined variable $theParent in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 20
+[23-Sep-2024 07:19:48 UTC] PHP Warning:  Undefined variable $theParent in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 20
