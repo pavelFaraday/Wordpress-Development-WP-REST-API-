@@ -222,3 +222,40 @@ Displays or retrieves page title for category archive.
 #### `the_author()`
 Displays the name of the author of the current post.
 
+---
+
+#### Custom Queries
+Custom Queries allow us to load whatever we want, wherever we want.
+
+In WordPress, a Custom Query refers to a query that retrieves specific data from the WordPress database beyond the default set of posts or pages. It allows developers to fetch data based on custom criteria such as custom post types, specific taxonomies, meta fields, or a particular date range.
+
+WordPress uses the WP_Query class to handle the default query (e.g., listing posts on a blog). However, if you need more control over what content is displayed, you can create a Custom Query using WP_Query, get_posts(), or query_posts() functions.
+
+`WP_Query()` - Sets up the WordPress query, if parameter is not empty.
+
+
+**Example - Loop 2 recent posts with Custom Query:** 
+```
+<?php 
+$homepage_posts = new WP_Query(array(
+    'posts_per_page' => 2,
+    'post_type' => 'post',
+    'category_name' => 'food',
+));
+
+while($homepage_posts->have_posts()){
+    $homepage_posts->the_post();
+?>
+    <div class="event-summary">
+    <a class="event-summary__date event-summary__date--beige t-center" href="<?php the_permalink(); ?>">
+        <span class="event-summary__month"><?php the_time('M'); ?></span>
+        <span class="event-summary__day"><?php the_time('d'); ?></span>
+    </a>
+    <div class="event-summary__content">
+        <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+        <p><?php echo wp_trim_words(get_the_content(), 18); ?>  <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
+    </div>
+    </div>
+<?php } wp_reset_postdata(); ?> 
+```
+---
