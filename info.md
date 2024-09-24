@@ -191,4 +191,34 @@ add_action('after_setup_theme', 'university_features');
 #### `pagination_list()`
 Create pagination is posts;
 
+---
+
+#### `is_category()`
+Determines whether the query is for an existing category archive page.
+
+#### `is_author()`
+Determines whether the query is for an existing author archive page.
+
+#### `the_archive_title()`
+Displays the archive title based on the queried object.
+
+P.S Most often we use these functions in `archive.php`
+
+> **Examples:** 
+```
+if (is_category()) {
+    single_cat_title();
+}
+if (is_author()) {
+    echo 'Posts by '; the_author();
+}
+```
+Or instead of this if/else statements we can write: `the_archive_title();`
+
+
+#### `single_cat_title();`
+Displays or retrieves page title for category archive.
+
+#### `the_author()`
+Displays the name of the author of the current post.
 
