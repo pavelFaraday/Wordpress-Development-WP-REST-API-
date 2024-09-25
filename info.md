@@ -259,3 +259,8 @@ while($homepage_posts->have_posts()){
 <?php } wp_reset_postdata(); ?> 
 ```
 ---
+
+#### `get_post_type()`
+Retrieves the post type of the current post or of a given post.
+
+---
