@@ -264,3 +264,81 @@ while($homepage_posts->have_posts()){
 Retrieves the post type of the current post or of a given post.
 
 ---
+
+## Custom Post Types
+
+In WordPress, a Custom Post Type (CPT) allows you to create and manage different types of content beyond the default types like Posts and Pages. Essentially, it's a way to extend WordPress’s functionality to handle content more suited to your needs.
+
+#### Default Post Types in WordPress
+By default, WordPress comes with a few built-in post types:
+
+- Posts: Used for blog entries.
+- Pages: Used for static content (e.g., About page).
+- Attachments: Handles media uploads.
+- Revisions: Tracks changes made to content.
+- Menus: Used for navigation menus.
+While these default types work for most cases, there are situations where you need more specific types of content, and that’s where CPTs come in.
+
+#### What Is a Custom Post Type?
+A Custom Post Type is a structure you can create to display unique types of content. For example, if you’re building a movie review website, you might want a "Movies" CPT where each entry contains a movie’s title, release date, and director. Similarly, a real estate site might have a "Properties" CPT with fields for location, price, and number of rooms.
+
+#### Creating a Custom Post Type
+You can create a CPT by adding custom code to your theme’s functions.php file or using a plugin like Custom Post Type UI. Here’s a simple code example to register a "Movies" custom post type:
+
+```
+function university_post_types() {
+  register_post_type('events',
+      array(
+          'labels' => array (
+              'name' => __('Events'),
+              'singular_name' => __('Event')
+          ),
+          'public' => true,
+          'menu_icon' => 'dashicons-calendar-alt',
+          'has_archive' => true,
+          'rewrite' => array('slug' => 'Events'),
+          'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+      )
+  );
+}
+add_action('init', 'university_post_types'); 
+```
+
+#### Why Use Custom Post Types?
+- Organization: Helps keep different content types separate, making your site more organized.
+- Better Functionality: Each CPT can have its own custom fields, templates, and features.
+- Tailored Admin Panel: You can create custom taxonomies (like categories and tags) and customize the WordPress admin interface for specific content.
+
+#### Use Cases for Custom Post Types
+- Portfolio: Showcasing individual projects or case studies.
+- Testimonials: Displaying customer reviews or feedback.
+- Products: Creating an e-commerce catalog.
+- Events: Managing an event calendar.
+
+Using Custom Post Types allows you to make WordPress even more flexible, adapting it perfectly to different types of content for custom websites.
+
+---
+
+## Must Use Plugins (MU-Plugins) in WordPress
+
+In WordPress, "Must-Use Plugins" (also known as MU-Plugins) are special types of plugins that are automatically enabled for a site without needing to be manually activated. These plugins are different from regular plugins in the following ways:
+
+Key Features of Must-Use Plugins:
+1. **Automatic Activation:** Must-use plugins are automatically activated when placed in the mu-plugins directory. You cannot deactivate them through the WordPress admin dashboard.
+
+2. **Special Directory:** MU-plugins are stored in a specific folder located at `wp-content/mu-plugins/`. This is separate from the standard plugin folder.
+
+3. **Global Across Multisites:** For WordPress multisite installations, MU-plugins can be used across all sites in the network. This is especially useful for plugins that need to be applied universally, like security or performance-related plugins.
+
+4. **No UI in Admin:** Must-use plugins don't appear in the standard "Plugins" section of the WordPress admin dashboard. Instead, they are listed under a separate "Must-Use" tab, if present.
+
+5. **Use Cases:** They are typically used for essential functionality that should always be active, such as security features, caching systems, or specific custom code that needs to run regardless of other plugin activations.
+
+6. **No Deactivation:** Since these plugins are managed manually by adding or removing files from the mu-plugins folder, they can't be turned off through the dashboard.
+
+#### How to Add a Must-Use Plugin:
+To add a must-use plugin, simply upload the PHP file (or a directory containing the plugin's files) into the wp-content/mu-plugins/ folder. The plugin will automatically be enabled.
+
+This is commonly used by developers to ensure critical functionality is always enabled and cannot be accidentally disabled by admins.
+
+---

@@ -94,3 +94,12 @@
 [24-Sep-2024 21:15:46] NOTICE: exiting, bye-bye!
 [25-Sep-2024 10:47:31] NOTICE: fpm is running, pid 1484
 [25-Sep-2024 10:47:31] NOTICE: ready to handle connections
+[25-Sep-2024 12:29:03] NOTICE: Terminating ...
+[25-Sep-2024 12:29:03] NOTICE: exiting, bye-bye!
+[25-Sep-2024 12:29:11] NOTICE: fpm is running, pid 5037
+[25-Sep-2024 12:29:11] NOTICE: ready to handle connections
+[25-Sep-2024 12:29:40] NOTICE: Terminating ...
+[25-Sep-2024 12:29:40] NOTICE: Terminating ...
+[25-Sep-2024 12:29:40] NOTICE: exiting, bye-bye!
+[25-Sep-2024 12:29:58] NOTICE: fpm is running, pid 5129
+[25-Sep-2024 12:29:58] NOTICE: ready to handle connections
