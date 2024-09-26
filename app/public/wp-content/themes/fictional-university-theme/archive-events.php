@@ -11,8 +11,7 @@
 </div>  
 </div>
 
-
-<!-- List Down all Posts -->
+<!-- List Down all CPT Events -->
 <div class="container container--narrow page-section">
 <?php 
 while (have_posts()) {

@@ -2,13 +2,13 @@
   // Create Event CPT
 function university_post_types() {
     register_post_type('events',
-        array(
+        array (
             'public' => true,
             'show_in_rest' => true,
             'menu_icon' => 'dashicons-calendar-alt',
             'has_archive' => true,
             'rewrite' => array('slug' => 'events'),
-            'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+            'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'),
             'labels' => array (
                 'name' => __('Events'),
                 'add_new_item' => 'Add New Event',

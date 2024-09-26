@@ -13,7 +13,6 @@
 </div>  
 </div>
 
-
 <!-- List Down all Posts -->
 <div class="container container--narrow page-section">
   <?php 
@@ -31,10 +30,7 @@
     </div>
   </div>
   <?php } ?>
-
 <?php echo paginate_links(); ?>
-
 </div>
-
 
 <?php  get_footer(); ?>

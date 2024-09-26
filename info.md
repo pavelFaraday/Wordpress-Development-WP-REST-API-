@@ -78,6 +78,21 @@ Displays the post content.
 #### `the_excerpt();`
 Displays the post excerpt.
 
+#### `has_excerpt();`
+Determines whether the post has a custom excerpt set on the WP Dashboard.
+> **Example of best excerpt conditional logic:**
+```
+<p>
+    <?php 
+        if (has_excerpt()) {
+            echo get_the_excerpt();
+        } else {
+            echo wp_trim_words(get_the_content(), 18);
+        } 
+    ?>
+</p>
+```
+
 #### `the_author_posts_link();`
 Displays an HTML link with Author name to the author page of the current post’s author.
 
