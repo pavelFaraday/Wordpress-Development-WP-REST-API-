@@ -202,6 +202,15 @@ Determines whether the query is for an existing author archive page.
 #### `the_archive_title()`
 Displays the archive title based on the queried object.
 
+#### `the_archive_description()`
+Displays category, tag, term, or author description from Wordpress dashboard.
+
+#### `get_post_type_archive_link()`
+Retrieves the permalink for a post type archive.
+@param $post_type: Post type.
+@return The post type archive permalink.
+> **Example:** `get_post_type_archive_link('events)`
+
 P.S Most often we use these functions in `archive.php`
 
 > **Examples:** 
@@ -287,21 +296,25 @@ You can create a CPT by adding custom code to your theme’s functions.php file 
 
 ```
 function university_post_types() {
-  register_post_type('events',
-      array(
-          'labels' => array (
-              'name' => __('Events'),
-              'singular_name' => __('Event')
-          ),
-          'public' => true,
-          'menu_icon' => 'dashicons-calendar-alt',
-          'has_archive' => true,
-          'rewrite' => array('slug' => 'Events'),
-          'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
-      )
-  );
-}
-add_action('init', 'university_post_types'); 
+    register_post_type('events',
+        array(
+            'public' => true,
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-calendar-alt',
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'Events'),
+            'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+            'labels' => array (
+                'name' => __('Events'),
+                'add_new_item' => 'Add New Event',
+                'edit_item' => 'Edit Event',
+                'all_items' => 'All Events',
+                'singular_name' => __('Event')
+            )
+        )
+    );
+  }
+  add_action('init', 'university_post_types');
 ```
 
 #### Why Use Custom Post Types?
