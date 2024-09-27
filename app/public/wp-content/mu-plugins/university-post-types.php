@@ -8,7 +8,7 @@ function university_post_types() {
             'menu_icon' => 'dashicons-calendar-alt',
             'has_archive' => true,
             'rewrite' => array('slug' => 'events'),
-            'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'),
+            'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
             'labels' => array (
                 'name' => __('Events'),
                 'add_new_item' => 'Add New Event',
