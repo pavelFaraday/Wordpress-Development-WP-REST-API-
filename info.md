@@ -261,11 +261,12 @@ WordPress uses the WP_Query class to handle the default query (e.g., listing pos
 **Example - Loop 2 recent posts with Custom Query:** 
 ```
 <?php 
-$homepage_posts = new WP_Query(array(
-    'posts_per_page' => 2,
-    'post_type' => 'post',
-    'category_name' => 'food',
-));
+    $homepageEvents = new WP_Query(array(
+        'posts_per_page' => -1, //  "-1" - return all posts
+        'post_type' => 'events',
+        'orderby' => 'post_date', // default is 'post_date' (another properties: 'title', 'rand', 'meta_value')
+        'order' => 'ASC' // default is 'DESC'
+    )); 
 
 while($homepage_posts->have_posts()){
     $homepage_posts->the_post();
@@ -282,6 +283,41 @@ while($homepage_posts->have_posts()){
     </div>
 <?php } wp_reset_postdata(); ?> 
 ```
+---
+## Meta Query
+
+In WordPress, a **meta query** is a specialized type of query used within the `WP_Query` class to  **filter posts based on the value of post meta fields (also known as custom fields).** Post meta fields allow you to store additional information about a post, page, or custom post type, and meta queries make it easy to retrieve content based on this data.
+
+#### Example of a Meta Query:
+```php
+// Hide event if it's date is in the past  (show event if event_date >= Today)
+$today = date('Ymd'); // Today
+$homepageEvents = new WP_Query(array(
+    'posts_per_page' => -1,
+    'post_type' => 'events',
+    'meta_key' => 'event_date', // 'event_date' - name of the custom field
+    'orderby' => 'meta_value_num',  // Date is number, so sort with Date ('event_date') ASC order
+    'meta_query' => array(
+        array(
+        'key' => 'event_date', // meta_key -> name of the custom field
+        'compare' => '>=', // Comparision
+        'value' => $today,
+        'type' => 'numeric' // We should compare only numeric values (date)
+        )
+    ), // All this Array logic means: Only show event posts if event_date >= Today Date
+    'order' => 'ASC',
+));
+```
+
+#### Common Parameters:
+- **key**: The meta key to filter by.
+- **value**: The value you're looking for in that meta key.
+- **compare**: Comparison operator (e.g., `=`, `!=`, `LIKE`, `NOT LIKE`, `>`, `<`, etc.).
+- **type**: The type of data being compared (e.g., `NUMERIC`, `CHAR`, `DATE`).
+  
+
+Meta queries are extremely powerful for filtering and retrieving posts based on various criteria stored in post meta fields.
+
 ---
 
 #### `get_post_type()`
@@ -309,7 +345,7 @@ A Custom Post Type is a structure you can create to display unique types of cont
 #### Creating a Custom Post Type
 You can create a CPT by adding custom code to your theme’s functions.php file or using a plugin like Custom Post Type UI. Here’s a simple code example to register a "Movies" custom post type:
 
-```
+```php
 function university_post_types() {
     register_post_type('events',
         array(
@@ -421,3 +457,70 @@ With plugins like ACF, you can add different types of custom fields, such as tex
 Since custom fields are stored as post metadata, overloading posts with excessive custom fields or using them inefficiently can cause performance issues. You should ensure that the custom fields you use are necessary and optimized.
 
 In summary, custom fields provide a powerful way to extend WordPress’s capabilities, enabling you to add custom metadata to your posts or pages, create dynamic templates, and build more complex websites without modifying the core WordPress code.
+
+---
+
+Metadata in WordPress refers to the data that provides extra or custom additional data/information your website. This includes things like post titles, descriptions, publication dates, categories, and tags. WordPress automatically generates and stores metadata to help organize content and make it easier for search engines and visitors to understand your site's structure. 
+
+Here are the core concepts of metadata in WordPress:
+
+#### 1. Post Metadata
+   - **Title:** The title of a post or page.
+   - **Excerpt:** A short summary of a post.
+   - **Date:** The published or updated date.
+   - **Author:** Information about the post author.
+   - **Category and Tags:** Taxonomies used to organize content by topic or relevance.
+   - **Slug:** The URL-friendly version of the post title.
+   - **Custom Fields:** User-defined data fields that can be added to a post or page to store additional information.
+
+#### 2. User Metadata
+   - **Username:** The user’s login name.
+   - **Display Name:** The name shown publicly on the site.
+   - **User Role:** Defines the capabilities a user has on the site (e.g., administrator, editor, author).
+   - **Email Address:** The email associated with the user.
+   - **Profile Information:** Other details like website URL, bio, and profile picture.
+
+#### 3. Comment Metadata
+   - **Comment Author:** The person who submitted the comment.
+   - **Comment Date:** The timestamp when the comment was posted.
+   - **Comment Content:** The actual comment text.
+   - **Comment Status:** Indicates whether the comment is approved, pending, or marked as spam.
+   - **IP Address:** The IP address of the user who submitted the comment.
+
+#### 4. Taxonomy Metadata
+   - **Categories:** Grouping of posts around general topics.
+   - **Tags:** Specific keywords used to describe a post in more detail.
+   - **Custom Taxonomies:** User-created taxonomies that allow for more specific categorization.
+
+#### 5. Media Metadata
+   - **Alt Text:** Text that describes the media file (useful for SEO and accessibility).
+   - **Caption:** A short description of the media file, often displayed with the media.
+   - **Description:** A more detailed description of the media file.
+   - **File Name:** The name of the file as it is stored in the WordPress media library.
+   - **File Type and Size:** Information about the media file format and size.
+
+#### 6. SEO Metadata
+   - **Meta Title:** The title that appears in search engine results (set using plugins like Yoast or RankMath).
+   - **Meta Description:** A brief summary of the page or post that appears in search engine results.
+   - **Meta Keywords:** Keywords that help define the content for search engines (though not as commonly used anymore).
+
+#### 7. Custom Metadata
+   - **Custom Fields:** Extra fields that allow you to add personalized data to a post, user, or taxonomy (e.g., product prices, event dates).
+   - **Meta Boxes:** Admin panels in the WordPress editor that allow you to add or edit metadata (e.g., Yoast SEO meta box).
+
+#### 8. Site Metadata
+   - **Site Title:** The name of your WordPress site.
+   - **Tagline:** A brief description of what your site is about.
+   - **Favicon/Icon:** The small image or logo displayed in the browser tab.
+   - **Language and Timezone Settings:** Information about the site’s regional settings.
+   - **Permalinks:** The URL structure used for your posts and pages.
+
+#### 9. REST API Metadata
+   - When developing, metadata can also be accessed or added using the WordPress REST API. This allows developers to retrieve, modify, or add metadata programmatically.
+
+#### 10. Plugin-Related Metadata
+   - Many plugins store metadata for their specific functionality (e.g., WooCommerce product metadata like price, SKU, inventory count, etc.).
+
+Metadata plays a significant role in organizing, categorizing, and managing content in WordPress. It is essential not just for site management but also for SEO optimization and content discoverability.
+
+---

@@ -286,3 +286,10 @@ Stack trace:
 [25-Sep-2024 08:25:03 UTC] PHP Warning:  include_once(): Failed opening '/Users/macuser/Local Sites/fictional-university/app/public/wp-content/mu-plugins/university-post-types.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in /Users/macuser/Local Sites/fictional-university/app/public/wp-settings.php on line 447
 [25-Sep-2024 08:26:03 UTC] PHP Fatal error:  Cannot redeclare university_post_types() (previously declared in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/mu-plugins/university-post-types.php:3) in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 25
 [26-Sep-2024 08:30:53 UTC] PHP Parse error:  syntax error, unexpected identifier "posts_per_page", expecting ")" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/front-page.php on line 57
+[28-Sep-2024 07:21:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function ASC() in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/front-page.php:24
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#3 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/front-page.php on line 24

@@ -17,9 +17,30 @@
 
           <?php 
           // List down Custom Post Type - Events
+/*           
           $homepageEvents = new WP_Query(array(
-            'posts_per_page' => 2,
-            'post_type' => 'events'
+            'posts_per_page' => -1, //  "-1" - return all posts
+            'post_type' => 'events',
+            'orderby' => 'post_date', // default is 'post_date' (another properties: 'title', 'rand', 'meta_value')
+            'order' => 'ASC' // default is 'DESC'
+          )); 
+*/
+          // Hide event if it's date is in the past  (show event if event_date >= Today)
+          $today = date('Ymd'); // Today
+          $homepageEvents = new WP_Query(array(
+            'posts_per_page' => -1,
+            'post_type' => 'events',
+            'meta_key' => 'event_date', // 'event_date' - name of the custom field
+            'orderby' => 'meta_value_num',  // Date is number, so sort with Date ('event_date') ASC order
+            'meta_query' => array(
+              array(
+                'key' => 'event_date', // meta_key -> name of the custom field
+                'compare' => '>=', // Comparision
+                'value' => $today,
+                'type' => 'numeric' // We should compare only numeric values (date)
+              )
+            ), // All this Array logic means: Only show event posts if event_date >= Today Date
+            'order' => 'ASC',
           ));
 
           while($homepageEvents->have_posts()){
@@ -63,7 +84,7 @@
           <?php 
           // List down Posts
           $homepage_posts = new WP_Query(array(
-            'posts_per_page' => 2,
+            'posts_per_page' => 3,
             'post_type' => 'post',
             // 'category_name' => 'food',
           ));
