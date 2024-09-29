@@ -28,7 +28,7 @@
           // Hide event if it's date is in the past  (show event if event_date >= Today)
           $today = date('Ymd'); // Today
           $homepageEvents = new WP_Query(array(
-            'posts_per_page' => -1,
+            'posts_per_page' => 2,
             'post_type' => 'events',
             'meta_key' => 'event_date', // 'event_date' - name of the custom field
             'orderby' => 'meta_value_num',  // Date is number, so sort with Date ('event_date') ASC order

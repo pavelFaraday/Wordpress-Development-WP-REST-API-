@@ -31,6 +31,44 @@ An action which tells wordpress load and enqueue CSS & JS files.
 
 This hook is called during each page load, after the theme is initialized. It is generally used to perform basic setup, registration, and init actions for a theme.
 
+#### `pre_get_posts` - An Action
+Right before WordPress sends its query to the database, 'pre_get_posts' hook will give our function the last word to execute/run. It will give us a chance to adjust the query, hence the name of the event. 
+📌 `pre_get_posts` hook works GLOBALLY - for all posts Queries/listings!!! So, Rules will be expand/apply on all posts & custom posts. It is too universal, because it will customize every single query on website. 
+📌 It adds pagination to post lists as well. 
+📌 It applies on Backend Queries as well !!!
+
+**Example 1:**
+```php
+function university_adjust_queries ($query) {
+  if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
+    $query->set('posts_per_page', '1');
+  }
+}
+add_action('pre_get_posts', 'university_adjust_queries');
+```
+
+
+**Example 2:**
+```php
+function university_adjust_queries ($query) {
+  $today = date('Ymd');
+
+  if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
+    $query->set('meta_key', 'event_date');
+    $query->set('orderby', 'meta_value_num');
+    $query->set('order', 'ASC');
+    $query->set('meta_query', array(
+      array(
+        'key' => 'event_date',
+        'compare' => '>=', 
+        'value' => $today,
+        'type' => 'numeric'
+      )
+    ));
+  }
+}
+add_action('pre_get_posts', 'university_adjust_queries');
+```
 ---
 
 #### `wp_enqueue_style()`
@@ -248,10 +286,12 @@ Displays the name of the author of the current post.
 
 ---
 
-#### Custom Queries
+## Custom Queries
 Custom Queries allow us to load whatever we want, wherever we want.
 
 In WordPress, a Custom Query refers to a query that retrieves specific data from the WordPress database beyond the default set of posts or pages. It allows developers to fetch data based on custom criteria such as custom post types, specific taxonomies, meta fields, or a particular date range.
+
+So, custom queries are the right tool for the job when you want to do something that isn't related to the default behavior of the current URL.
 
 WordPress uses the WP_Query class to handle the default query (e.g., listing posts on a blog). However, if you need more control over what content is displayed, you can create a Custom Query using WP_Query, get_posts(), or query_posts() functions.
 
@@ -259,7 +299,7 @@ WordPress uses the WP_Query class to handle the default query (e.g., listing pos
 
 
 **Example - Loop 2 recent posts with Custom Query:** 
-```
+```php
 <?php 
     $homepageEvents = new WP_Query(array(
         'posts_per_page' => -1, //  "-1" - return all posts
@@ -459,6 +499,7 @@ Since custom fields are stored as post metadata, overloading posts with excessiv
 In summary, custom fields provide a powerful way to extend WordPress’s capabilities, enabling you to add custom metadata to your posts or pages, create dynamic templates, and build more complex websites without modifying the core WordPress code.
 
 ---
+## Metadata
 
 Metadata in WordPress refers to the data that provides extra or custom additional data/information your website. This includes things like post titles, descriptions, publication dates, categories, and tags. WordPress automatically generates and stores metadata to help organize content and make it easier for search engines and visitors to understand your site's structure. 
 
@@ -524,3 +565,27 @@ Here are the core concepts of metadata in WordPress:
 Metadata plays a significant role in organizing, categorizing, and managing content in WordPress. It is essential not just for site management but also for SEO optimization and content discoverability.
 
 ---
+
+#### `is_post_type_archive()`
+Determines whether the query is for an existing post type archive page.
+
+**@params:** Post type or array of posts types to check against.
+
+**@Return:** ***bool*** Whether the query is for an existing post type archive page.
+
+
+#### `is_main_query(): bool`
+Determines whether the query is the default/main/core, (default URL based) based query (NOT Custom Query). 
+
+```php
+function university_adjust_queries ($query) {
+  if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
+    $query->set('posts_per_page', '1');
+  }
+}
+add_action('pre_get_posts', 'university_adjust_queries');
+```
+
+---
+
+❓❓❓❓❓❓ Conditional Tags ❓❓❓❓❓❓❓
