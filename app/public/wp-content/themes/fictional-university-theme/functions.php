@@ -20,9 +20,9 @@ function university_features() {
 }
 add_action('after_setup_theme', 'university_features');
 
+
 function university_adjust_queries ($query) {
   $today = date('Ymd');
-
   if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
     $query->set('meta_key', 'event_date');
     $query->set('orderby', 'meta_value_num');

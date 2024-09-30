@@ -244,6 +244,32 @@ add_action('after_setup_theme', 'university_features');
 #### `pagination_list()`
 Create pagination is posts;
 
+#### `paginate_links()`
+Retrieves paginated links for archive post pages.
+❗️This is general WP pagination & only works with default queries, that WP makes on its own tied to the current URL.❗️
+
+#### `get_query_var()`
+Retrieves the value of a query variable in the WP_Query class.
+We use it for Pagination in Custom Queries.
+
+**@param:** `$query_var`: The variable key to retrieve.
+**@param:** `$default_value`: Optional. Value to return if the query variable is not set. Default empty string.
+
+**@return:** Contents of the query variable.
+
+```php
+$pastEvents = new WP_Query(array(
+    'paged' => get_query_var('paged', 1),
+    // another code..
+));
+
+⬆️⬆️⬆️ Works with ⬇️⬇️⬇️
+
+<?php echo paginate_links(array (
+    'total' => $pastEvents->max_num_pages
+)); ?>
+```
+
 ---
 
 #### `is_category()`
