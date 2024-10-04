@@ -1,8 +1,5 @@
 ## Actions
 
-#### `wp_enqueue_scripts` - An Action
-An action which tells wordpress load and enqueue CSS & JS files.
-
 #### `after_setup_theme` - An Action
 
 This hook is called during each page load, after the theme is initialized. It is generally used to perform basic setup, registration, and init actions for a theme.
