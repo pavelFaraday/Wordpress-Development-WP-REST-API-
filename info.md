@@ -1,57 +1,3 @@
-## Actions
-
-#### `after_setup_theme` - An Action
-
-This hook is called during each page load, after the theme is initialized. It is generally used to perform basic setup, registration, and init actions for a theme.
-
-#### `pre_get_posts` - An Action
-Right before WordPress sends its query to the database, 'pre_get_posts' hook will give our function the last word to execute/run. It will give us a chance to adjust the query, hence the name of the event. 
-📌 `pre_get_posts` hook works GLOBALLY - for all posts Queries/listings!!! So, Rules will be expand/apply on all posts & custom posts. It is too universal, because it will customize every single query on website. 
-📌 It adds pagination to post lists as well. 
-📌 It applies on Backend Queries as well !!!
-
-**Example 1:**
-```php
-function university_adjust_queries ($query) {
-  if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
-    $query->set('posts_per_page', '1');
-  }
-}
-add_action('pre_get_posts', 'university_adjust_queries');
-```
-
-
-**Example 2:**
-```php
-function university_adjust_queries ($query) {
-  $today = date('Ymd');
-
-  if(!is_admin() AND is_post_type_archive('events') AND $query->is_main_query()){
-    $query->set('meta_key', 'event_date');
-    $query->set('orderby', 'meta_value_num');
-    $query->set('order', 'ASC');
-    $query->set('meta_query', array(
-      array(
-        'key' => 'event_date',
-        'compare' => '>=', 
-        'value' => $today,
-        'type' => 'numeric'
-      )
-    ));
-  }
-}
-add_action('pre_get_posts', 'university_adjust_queries');
-```
----
-
-#### `wp_enqueue_style()`
-Registers the CSS style if source provided (does NOT overwrite) and enqueues.
-
-#### `wp_enqueue_script()`
-Registers the JS scripts if `$src` provided (does NOT overwrite), and enqueues it.
-
-> **Example:** 
-`wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);`
 
 #### `get_stylesheet_uri()`
 Automatically Retrieves stylesheet URI for the active theme.
@@ -215,7 +161,7 @@ add_action('after_setup_theme', 'university_features');
 ---
 
 #### `pagination_list()`
-Create pagination is posts;
+Create pagination in posts;
 
 #### `paginate_links()`
 Retrieves paginated links for archive post pages.
@@ -367,3 +313,4 @@ Retrieves the post type of the current post or of a given post.
 
 
 ❓❓❓❓❓❓ Conditional Tags ❓❓❓❓❓❓❓
+❓❓❓❓❓❓ Difference between actions & filters ❓❓❓❓❓❓❓
