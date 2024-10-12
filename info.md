@@ -1,8 +1,3 @@
-
-#### `get_stylesheet_uri()`
-Automatically Retrieves stylesheet URI for the active theme.
-The stylesheet file name must be 'style.css' which is appended to the stylesheet directory URI path.
-
 #### `get_theme_file_uri()`
 Retrieves the URL of a file in the theme.
 > **Example:** `get_theme_file_uri('/build/style-index.css')`
