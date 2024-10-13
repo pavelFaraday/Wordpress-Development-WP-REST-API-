@@ -1,7 +1,3 @@
-#### `get_theme_file_uri()`
-Retrieves the URL of a file in the theme.
-> **Example:** `get_theme_file_uri('/build/style-index.css')`
-
 #### `wp_footer()`
 Prints scripts or data before the closing body tag on the front end.
 
