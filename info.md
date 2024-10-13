@@ -1,3 +1,11 @@
+❓❓❓❓❓ `get_template_directory_uri()` 
+❓❓❓❓❓ `get_theme_file_path()`
+❓❓❓❓❓ Conditional Tags 
+❓❓❓❓❓ Difference between actions & filters
+
+---
+
+
 #### `wp_footer()`
 Prints scripts or data before the closing body tag on the front end.
 
@@ -229,5 +237,3 @@ Retrieves the post type of the current post or of a given post.
 
 
 
-❓❓❓❓❓❓ Conditional Tags ❓❓❓❓❓❓❓
-❓❓❓❓❓❓ Difference between actions & filters ❓❓❓❓❓❓❓
