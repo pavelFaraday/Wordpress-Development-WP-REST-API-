@@ -1,5 +1,3 @@
-❓❓❓❓❓ `get_template_directory_uri()` 
-❓❓❓❓❓ `get_theme_file_path()`
 ❓❓❓❓❓ Conditional Tags 
 ❓❓❓❓❓ Difference between actions & filters
 
