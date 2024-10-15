@@ -3,10 +3,6 @@
 
 ---
 
-
-#### `wp_footer()`
-Prints scripts or data before the closing body tag on the front end.
-
 #### `add_theme_support()`
 Registers theme support for a given feature.
 Must be called in the theme’s **`functions.php`** file to work.
@@ -63,15 +59,6 @@ Returns the ID of the post’s parent, if it exists, otherwise returns 0.
 
 #### `get_permalink()`
 Retrieves the full permalink for the current post or post ID.
-
-#### Difference between prebuilt wordpress functions `get_` & `the_`
-
-- If a function begins with `the` word the, that means WordPress will **indeed handle echoing and outputting it onto the page for you 👍**.
-
-- On the other hand,if a WordPress function begins with the word `get`, that means **it's not going to echo anything for you! 🚫**. It's just going to return a value, saving it in PHP memory and it's up to you to use that value however you see fit.
-
-> **Example 1:** `the_title()` VS `get_the_title`
-> **Example 2:** `the_ID()` VS `get_the_ID()`
 
 #### `wp_list_pages();`
 
