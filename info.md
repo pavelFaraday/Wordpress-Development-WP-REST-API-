@@ -14,34 +14,6 @@ If attached to a hook, it must be **`after_setup_theme`**.
 Retrieves the Root URL for the current site. Returns the ‘site_url’ option with the appropriate protocol, ‘https’ if is_ssl() and ‘http’ otherwise.
 > **Example:** `<li><a href="<?php echo site_url('/about-us') ?>">About Us</a></li>`
 
-#### `the_title()` 
-Displays or retrieves the current post title with optional markup.
-> **Example:** `<p><?php echo the_title(); ?></p>`
-
-#### `get_the_title()`
-Retrieves the post title.
-If the post is protected and the visitor is not an admin, then "Protected" will be inserted before the post title. If the post is private, then "Private" will be inserted before the post title.
-
-#### `the_content();`
-Displays the post content.
-
-#### `the_excerpt();`
-Displays the post excerpt.
-
-#### `has_excerpt();`
-Determines whether the post has a custom excerpt set on the WP Dashboard.
-> **Example of best excerpt conditional logic:**
-```
-<p>
-    <?php 
-        if (has_excerpt()) {
-            echo get_the_excerpt();
-        } else {
-            echo wp_trim_words(get_the_content(), 18);
-        } 
-    ?>
-</p>
-```
 
 #### `the_author_posts_link();`
 Displays an HTML link with Author name to the author page of the current post’s author.
@@ -209,9 +181,6 @@ Or instead of this if/else statements we can write: `the_archive_title();`
 
 #### `single_cat_title();`
 Displays or retrieves page title for category archive.
-
-#### `the_author()`
-Displays the name of the author of the current post.
 
 ---
 
