@@ -3,13 +3,6 @@
 
 ---
 
-#### `add_theme_support()`
-Registers theme support for a given feature.
-Must be called in the theme’s **`functions.php`** file to work.
-If attached to a hook, it must be **`after_setup_theme`**.
-> **Example:** `add_theme_support('title-tag');`
-> adds title meta tag in the head
-
 #### `site_url()`
 Retrieves the Root URL for the current site. Returns the ‘site_url’ option with the appropriate protocol, ‘https’ if is_ssl() and ‘http’ otherwise.
 > **Example:** `<li><a href="<?php echo site_url('/about-us') ?>">About Us</a></li>`
