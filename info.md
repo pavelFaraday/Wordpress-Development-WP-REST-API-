@@ -29,7 +29,7 @@ Retrieves an **array** of pages (or hierarchical post type items).
 Displays the language attributes for the ‘html’ tag.
 
 **Example:** 
-```
+```html
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -55,40 +55,6 @@ Displays information about the current site.
 > **Example:** ` <body <?php body_class(); ?>>`
 > **Result: class="page-name blog child_or_parent_Page logged-in page-id admin-bar  customize-support"**
 
----
-
-#### How to setup Wordpress Dynamic Menu Location
-**Step 1:** in `functions.php` --> use `after_setup_theme` Hook with `register_nav_menu()` function:
-```
-function university_features() {
-  register_nav_menu('headerMenuLocation', 'Header Menu Location');
-  register_nav_menu('footerLocationOne', 'Footer Location One');
-  register_nav_menu('footerLocationTwo', 'Footer Location Two');
-}
-add_action('after_setup_theme', 'university_features');
-```
-
-**Step 2:** in `header.php` --> use `wp_nav_menu()` function and Wordpress will fetch Menu customized from the **Dashboard**:
-```
-<nav class="main-navigation">
-    <?php 
-        wp_nav_menu(array(
-            'theme_location' => 'headerMenuLocation'
-        ));
-    ?>
-</nav>
-```
-
-**Step 3:** in `footer.php` --> use `wp_nav_menu()` function and Wordpress will fetch Menu customized from the **Dashboard**:
-```
-<nav class="nav-list">
-    <?php 
-        wp_nav_menu(array(
-            'theme_location' => 'footerLocationOne'
-        ));
-    ?>
-</nav>
-```
 ---
 
 #### `pagination_list()`
