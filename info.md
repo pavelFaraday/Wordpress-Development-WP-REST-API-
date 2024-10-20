@@ -3,11 +3,6 @@
 
 ---
 
-#### `site_url()`
-Retrieves the Root URL for the current site. Returns the ‘site_url’ option with the appropriate protocol, ‘https’ if is_ssl() and ‘http’ otherwise.
-> **Example:** `<li><a href="<?php echo site_url('/about-us') ?>">About Us</a></li>`
-
-
 #### `the_author_posts_link();`
 Displays an HTML link with Author name to the author page of the current post’s author.
 
@@ -24,19 +19,6 @@ Returns the ID of the post’s parent, if it exists, otherwise returns 0.
 
 #### `get_permalink()`
 Retrieves the full permalink for the current post or post ID.
-
-#### `wp_list_pages();`
-
-Retrieves or displays a list of pages hierarchically (or hierarchical post type items) in **list (li)** format.
-
-**Example:**
-```
-wp_list_pages(array(
-    "title_li" => NULL,
-    "child_of" => $findChildrenOf,
-    "sort_column" => "menu_order"
-));
-```
 
 #### `get_pages();`
 Retrieves an **array** of pages (or hierarchical post type items).  
