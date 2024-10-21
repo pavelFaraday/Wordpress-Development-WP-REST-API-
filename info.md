@@ -35,20 +35,6 @@ Displays the language attributes for the ‘html’ tag.
 <head>
 ```
 
-#### `bloginfo()`
-Displays different information about the current site.
-
-> **Example 1:** `<meta charset="<?php bloginfo('charset'); ?>">` 
-> **Example 2:** `<title><?php bloginfo('name') ?></title>`
-> **Example 3:** `<?php bloginfo( 'description' ); ?>`
-> **Example 4:** `<?php bloginfo( 'url' ); ?>`
-
-**Example 5:** 
-```
-<h1><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-<h3><?php bloginfo( 'description' ); ?></h3>
-```
-
 #### `body_class();`
 Displays information about the current site.
 
