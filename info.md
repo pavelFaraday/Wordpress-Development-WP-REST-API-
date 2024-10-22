@@ -25,30 +25,14 @@ Retrieves an **array** of pages (or hierarchical post type items).
 
 *Very similar to `wp_list_pages();`. The only difference is that `wp_list_pages();` --> will handle <u>outputting the pages onto the screen</u>, whereas `get_pages();` --> just returns the pages in memory.*
 
-#### `language_attributes();`
-Displays the language attributes for the ‘html’ tag.
-
-**Example:** 
-```html
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-```
-
-#### `body_class();`
-Displays information about the current site.
-
-> **Example:** ` <body <?php body_class(); ?>>`
-> **Result: class="page-name blog child_or_parent_Page logged-in page-id admin-bar  customize-support"**
-
----
-
 #### `pagination_list()`
 Create pagination in posts;
 
 #### `paginate_links()`
 Retrieves paginated links for archive post pages.
 ❗️This is general WP pagination & only works with default queries, that WP makes on its own tied to the current URL.❗️
+
+---
 
 #### `get_query_var()`
 Retrieves the value of a query variable in the WP_Query class.
