@@ -1,5 +1,6 @@
 ❓❓❓❓❓ Conditional Tags 
-❓❓❓❓❓ Difference between actions & filters
+❓❓❓❓❓ Difference between actions & filters (`add_filter`)
+❓❓❓❓❓ pre_get_posts hook
 
 ---
 
@@ -32,32 +33,6 @@ Create pagination in posts;
 Retrieves paginated links for archive post pages.
 ❗️This is general WP pagination & only works with default queries, that WP makes on its own tied to the current URL.❗️
 
----
-
-#### `get_query_var()`
-Retrieves the value of a query variable in the WP_Query class.
-We use it for Pagination in Custom Queries.
-
-**@param:** `$query_var`: The variable key to retrieve.
-**@param:** `$default_value`: Optional. Value to return if the query variable is not set. Default empty string.
-
-**@return:** Contents of the query variable.
-
-```php
-$pastEvents = new WP_Query(array(
-    'paged' => get_query_var('paged', 1),
-    // another code..
-));
-
-⬆️⬆️⬆️ Works with ⬇️⬇️⬇️
-
-<?php echo paginate_links(array (
-    'total' => $pastEvents->max_num_pages
-)); ?>
-```
-
----
-
 #### `is_category()`
 Determines whether the query is for an existing category archive page.
 
@@ -72,8 +47,7 @@ Displays category, tag, term, or author description from Wordpress dashboard.
 
 #### `get_post_type_archive_link()`
 Retrieves the permalink for a post type archive.
-@param $post_type: Post type.
-@return The post type archive permalink.
+
 > **Example:** `get_post_type_archive_link('events)`
 
 P.S Most often we use these functions in `archive.php`
@@ -89,16 +63,12 @@ if (is_author()) {
 ```
 Or instead of this if/else statements we can write: `the_archive_title();`
 
-
 #### `single_cat_title();`
 Displays or retrieves page title for category archive.
-
----
 
 #### `get_post_type()`
 Retrieves the post type of the current post or of a given post.
 
----
 
 
 
