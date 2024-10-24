@@ -1,6 +1,6 @@
 ❓❓❓❓❓ Conditional Tags 
 ❓❓❓❓❓ Difference between actions & filters (`add_filter`)
-❓❓❓❓❓ pre_get_posts hook
+❓❓❓❓❓ pre_get_posts hook.
 
 ---
 
@@ -20,11 +20,6 @@ Returns the ID of the post’s parent, if it exists, otherwise returns 0.
 
 #### `get_permalink()`
 Retrieves the full permalink for the current post or post ID.
-
-#### `get_pages();`
-Retrieves an **array** of pages (or hierarchical post type items).  
-
-*Very similar to `wp_list_pages();`. The only difference is that `wp_list_pages();` --> will handle <u>outputting the pages onto the screen</u>, whereas `get_pages();` --> just returns the pages in memory.*
 
 #### `pagination_list()`
 Create pagination in posts;
@@ -49,19 +44,6 @@ Displays category, tag, term, or author description from Wordpress dashboard.
 Retrieves the permalink for a post type archive.
 
 > **Example:** `get_post_type_archive_link('events)`
-
-P.S Most often we use these functions in `archive.php`
-
-> **Examples:** 
-```
-if (is_category()) {
-    single_cat_title();
-}
-if (is_author()) {
-    echo 'Posts by '; the_author();
-}
-```
-Or instead of this if/else statements we can write: `the_archive_title();`
 
 #### `single_cat_title();`
 Displays or retrieves page title for category archive.
