@@ -1,6 +1,5 @@
-❓❓❓❓❓ Conditional Tags 
-❓❓❓❓❓ Difference between actions & filters (`add_filter`)
-❓❓❓❓ pre_get_posts hook.
+❓❓❓❓❓ Difference between actions, hooks & filters (`add_filter`)
+❓❓❓❓❓ pre_get_posts hook.
 ---
 
 #### `the_author_posts_link();`
@@ -26,12 +25,6 @@ Create pagination in posts;
 #### `paginate_links()`
 Retrieves paginated links for archive post pages.
 ❗️This is general WP pagination & only works with default queries, that WP makes on its own tied to the current URL.❗️
-
-#### `is_category()`
-Determines whether the query is for an existing category archive page.
-
-#### `is_author()`
-Determines whether the query is for an existing author archive page.
 
 #### `the_archive_title()`
 Displays the archive title based on the queried object.
