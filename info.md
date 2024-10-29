@@ -19,13 +19,6 @@ Returns the ID of the post’s parent, if it exists, otherwise returns 0.
 #### `get_permalink()`
 Retrieves the full permalink for the current post or post ID.
 
-#### `pagination_list()`
-Create pagination in posts;
-
-#### `paginate_links()`
-Retrieves paginated links for archive post pages.
-❗️This is general WP pagination & only works with default queries, that WP makes on its own tied to the current URL.❗️
-
 #### `the_archive_title()`
 Displays the archive title based on the queried object.
 
