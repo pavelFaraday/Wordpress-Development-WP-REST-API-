@@ -297,3 +297,5 @@ Stack trace:
 [29-Sep-2024 07:47:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
 [29-Sep-2024 07:47:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
 [30-Sep-2024 05:26:29 UTC] PHP Parse error:  Unmatched '}' in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/archive-events.php on line 39
+[01-Nov-2024 09:06:48 UTC] PHP Parse error:  syntax error, unexpected token "}" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 29
+[01-Nov-2024 09:06:48 UTC] PHP Parse error:  syntax error, unexpected token "}" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 29
