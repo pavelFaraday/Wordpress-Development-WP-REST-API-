@@ -29,6 +29,41 @@ while(have_posts()) {
   <div class="generic-content"><?php the_content(); ?></div>
 
   <?php
+  
+        /* -------------------------------------------------------------------------- */
+        /*                              Related Professors                            */
+        /* -------------------------------------------------------------------------- */
+        $relatedProfessors = new WP_Query(array(
+          'posts_per_page' => -1,
+          'post_type' => 'professor',
+          'orderby' => 'title',
+          'meta_query' => array(
+            array(
+              'key' => 'related_programs',
+              'compare' => 'LIKE', // contains
+              'value' => '"' . get_the_ID() . '"'
+            )
+          )
+        ));
+    
+        if ($relatedProfessors->have_posts()) {
+          echo "<hr class='section-break'>";
+          echo "<h2 class='headline headline--medium'>" . get_the_title() . " Professors</h2>";
+          
+          while($relatedProfessors->have_posts()){
+              $relatedProfessors->the_post();
+          ?>
+          <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+
+          <?php } ; 
+        }
+
+        wp_reset_postdata();
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                           Upcaming Related Events                          */
+    /* -------------------------------------------------------------------------- */
     $today = date('Ymd'); // Today
     $homepageEvents = new WP_Query(array(
       'posts_per_page' => 2,
@@ -49,7 +84,6 @@ while(have_posts()) {
         )
       )
     ));
-
 
     if ($homepageEvents->have_posts()) {
       echo "<hr class='section-break'>";
@@ -88,7 +122,7 @@ while(have_posts()) {
       <?php } ; 
     }
   ?> 
-
+  
 </div>
     
 <?php } get_footer(); ?>
