@@ -46,7 +46,7 @@ function university_post_types() {
         'show_in_rest' => true,
         'has_archive' => false,
         'menu-icon' => 'dashicons-welcome-learn-more',
-        'supports' => array('title', 'editor'),
+        'supports' => array('title', 'editor', 'thumbnail'),
         'labels' => array (
             'name' => __('Professors'),
             'add_new_item' => 'Add New Professor',
