@@ -304,3 +304,5 @@ Stack trace:
 [05-Nov-2024 09:12:44 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
 [05-Nov-2024 09:13:08 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
 [05-Nov-2024 09:14:59 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
+[05-Nov-2024 13:43:49 UTC] PHP Warning:  Array to string conversion in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 11
+[05-Nov-2024 13:48:49 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
