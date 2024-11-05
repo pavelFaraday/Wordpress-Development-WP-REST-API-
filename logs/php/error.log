@@ -301,3 +301,6 @@ Stack trace:
 [01-Nov-2024 09:06:48 UTC] PHP Parse error:  syntax error, unexpected token "}" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 29
 [01-Nov-2024 10:18:18 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-events.php on line 37
 [05-Nov-2024 06:15:30 UTC] PHP Parse error:  syntax error, unexpected token ";", expecting ")" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-program.php on line 58
+[05-Nov-2024 09:12:44 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
+[05-Nov-2024 09:13:08 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
+[05-Nov-2024 09:14:59 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
