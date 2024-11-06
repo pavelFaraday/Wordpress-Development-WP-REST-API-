@@ -306,3 +306,27 @@ Stack trace:
 [05-Nov-2024 09:14:59 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
 [05-Nov-2024 13:43:49 UTC] PHP Warning:  Array to string conversion in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 11
 [05-Nov-2024 13:48:49 UTC] PHP Warning:  Undefined array key "size" in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/plugins/manual-image-crop/lib/ManualImageCropEditorWindow.php on line 39
+[06-Nov-2024 02:43:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 11
+[06-Nov-2024 02:43:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 11
+[06-Nov-2024 02:43:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 11
+[06-Nov-2024 02:43:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 11
+[06-Nov-2024 02:43:59 UTC] PHP Warning:  Undefined variable $pageBanner in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 6
+[06-Nov-2024 02:43:59 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php:6
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#3 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 6
+[06-Nov-2024 02:44:01 UTC] PHP Warning:  Undefined variable $pageBanner in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 6
+[06-Nov-2024 02:44:01 UTC] PHP Fatal error:  Uncaught Error: Value of type null is not callable in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php:6
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#3 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-professor.php on line 6
+[06-Nov-2024 02:44:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 62
+[06-Nov-2024 02:44:28 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 62
+[06-Nov-2024 02:44:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 62
+[06-Nov-2024 02:44:30 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 62
