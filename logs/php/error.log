@@ -379,3 +379,19 @@ Stack trace:
 #3 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
 #4 {main}
   thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 54
+[08-Nov-2024 18:06:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 62
+[08-Nov-2024 18:06:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 62
+[08-Nov-2024 18:15:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_archive_description() in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/archive.php:6
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#3 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/archive.php on line 6
+[08-Nov-2024 18:15:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_archive_description() in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/archive.php:6
+Stack trace:
+#0 /Users/macuser/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/macuser/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/macuser/...')
+#2 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
+#3 {main}
+  thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/archive.php on line 6
