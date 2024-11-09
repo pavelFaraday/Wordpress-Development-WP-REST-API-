@@ -16,15 +16,6 @@
           <h2 class="headline headline--small-plus t-center">Upcoming Events</h2>
 
           <?php 
-          // List down Custom Post Type - Events
-/*           
-          $homepageEvents = new WP_Query(array(
-            'posts_per_page' => -1, //  "-1" - return all posts
-            'post_type' => 'events',
-            'orderby' => 'post_date', // default is 'post_date' (another properties: 'title', 'rand', 'meta_value')
-            'order' => 'ASC' // default is 'DESC'
-          )); 
-*/
           // Hide event if it's date is in the past  (show event if event_date >= Today)
           $today = date('Ymd'); // Today
           $homepageEvents = new WP_Query(array(

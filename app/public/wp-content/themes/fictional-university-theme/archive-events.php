@@ -8,9 +8,6 @@ pageBanner(array(
 ));
 ?>
 
-
-
-
 <!-- List Down all CPT Events -->
 <div class="container container--narrow page-section">
 <?php 

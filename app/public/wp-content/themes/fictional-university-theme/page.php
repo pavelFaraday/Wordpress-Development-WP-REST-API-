@@ -8,7 +8,6 @@
     ?>
 
   <div class="container container--narrow page-section">
-
     <!-- Show brudcramps if current page has parent page -->
     <?php 
     $theParent = wp_get_post_parent_id(get_the_ID());
