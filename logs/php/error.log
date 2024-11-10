@@ -395,3 +395,6 @@ Stack trace:
 #2 /Users/macuser/Local Sites/fictional-university/app/public/index.php(17): require('/Users/macuser/...')
 #3 {main}
   thrown in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/archive.php on line 6
+[10-Nov-2024 11:53:26 UTC] PHP Parse error:  Unclosed '{' on line 37 in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/front-page.php on line 124
+[10-Nov-2024 11:53:28 UTC] PHP Parse error:  Unclosed '{' on line 37 in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/front-page.php on line 124
+[10-Nov-2024 12:03:02 UTC] PHP Parse error:  Unclosed '{' on line 14 in /Users/macuser/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/archive-events.php on line 26
