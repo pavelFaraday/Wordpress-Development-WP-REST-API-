@@ -184,3 +184,7 @@
 [10-Nov-2024 16:15:43] NOTICE: exiting, bye-bye!
 [11-Nov-2024 19:02:26] NOTICE: fpm is running, pid 4658
 [11-Nov-2024 19:02:26] NOTICE: ready to handle connections
+[11-Nov-2024 20:17:14] NOTICE: Terminating ...
+[11-Nov-2024 20:17:14] NOTICE: exiting, bye-bye!
+[11-Nov-2024 20:17:17] NOTICE: fpm is running, pid 5790
+[11-Nov-2024 20:17:17] NOTICE: ready to handle connections
