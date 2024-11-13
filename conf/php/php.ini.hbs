@@ -96,7 +96,7 @@ extension=php_pdo_mysql.dll
 extension=php_fileinfo.dll
 extension=php_pdo_sqlite.dll
 extension=php_sqlite3.dll
-
+extension=php_zip.dll
 {{/if}}
 
 [MySQL]
@@ -233,12 +233,13 @@ zend_extension = {{extensionsDir}}/xdebug.so
 
 {{#if xdebugEnabled}}
 xdebug.mode=debug,develop
-{{else}}
-xdebug.mode=off
-{{/if}}
 xdebug.client_port=9003
 xdebug.start_with_request=yes
 xdebug.discover_client_host=yes
+xdebug.log_level=0
+{{else}}
+xdebug.mode=off
+{{/if}}
 
 [Pcre]
 pcre.jit=0 {{! Disable due to limitation with macOS Notarization }}
