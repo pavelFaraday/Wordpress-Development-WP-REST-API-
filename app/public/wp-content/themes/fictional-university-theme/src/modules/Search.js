@@ -8,7 +8,8 @@ class Search {
         this.searchOverlay =  $(".search-overlay");
 
         this.isOverlayOpen = false;
-
+        this.searchField = $("#search-term");
+        this.typingTimer;
         this.events(); // call "events" method
     }
 
@@ -17,9 +18,16 @@ class Search {
         this.openButton.on("click", this.openOverlay.bind(this));
         this.closeButton.on("click", this.closeOverlay.bind(this));
         $(document).on("keydown", this.keyPressDispatcher.bind(this));
+        this.searchField.on("keydown", this.typeInLogic.bind(this));
     }
 
     // 3. Methods (functions, action..)
+    typeInLogic() {
+        clearTimeout(this.typingTimer);
+        this.typingTimer = setTimeout(() => {
+            console.log("wolla");
+        }, 2000);
+    }
     keyPressDispatcher(e){
        if (e.keyCode == 83 && !this.isOverlayOpen) {
         this.openOverlay();
@@ -31,13 +39,11 @@ class Search {
     openOverlay() {
         this.searchOverlay.addClass("search-overlay--active");
         $("body").addClass("body-no-scroll");
-        console.log("open method just ran!");
         this.isOverlayOpen = true;
     }
     closeOverlay() {
         this.searchOverlay.removeClass("search-overlay--active");
         $("body").removeClass("body-no-scroll");
-        console.log("close method just ran!");
         this.isOverlayOpen = false;
     }
 }
