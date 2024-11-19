@@ -41,12 +41,12 @@ class Search {
 
 
         }
-
         this.previousValue = this.searchField.val(); 
     }
     getResults() {
-        this.resultsDiv.html("Search Results");
-        this.isSpinnerVisible = false;
+        $.getJSON('http://localhost:10033/wp-json/wp/v2/posts?search=' + this.searchField.val(), (posts) => {
+            alert(posts[0].title.rendered);
+        });
     }
     keyPressDispatcher(e){
        if (e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is(":focus")) {
