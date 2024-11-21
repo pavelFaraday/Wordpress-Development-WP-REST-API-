@@ -47,11 +47,12 @@ class Search {
         $.getJSON('http://localhost:10033/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
             this.resultsDiv.html(`
                 <h2 class="search-overlay__section-title">General information</h2>
-                <ul  class="link-list min-list">
+
+                ${posts.length ? ' <ul  class="link-list min-list">' : '<p>No General Information matches this term</p>'}
                     ${posts.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
-                </ul>
+                ${posts.length ? '</ul>' : ''}
             `);
-            // alert(posts[0].title.rendered);
+            this.isSpinnerVisible = false;
         });
     }
     keyPressDispatcher(e){
