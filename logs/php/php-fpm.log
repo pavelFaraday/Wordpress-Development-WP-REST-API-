@@ -27,3 +27,14 @@
 [20-Nov-2024 23:21:59] NOTICE: exiting, bye-bye!
 [21-Nov-2024 08:32:58] NOTICE: fpm is running, pid 12656
 [21-Nov-2024 08:32:58] NOTICE: ready to handle connections
+[21-Nov-2024 13:40:57] NOTICE: Terminating ...
+[21-Nov-2024 13:40:57] NOTICE: Terminating ...
+[21-Nov-2024 13:40:57] NOTICE: exiting, bye-bye!
+[22-Nov-2024 08:36:50] NOTICE: fpm is running, pid 27532
+[22-Nov-2024 08:36:50] NOTICE: ready to handle connections
+[22-Nov-2024 08:52:26] WARNING: [pool www] child 27538 said into stderr: "sh: post: command not found"
+[22-Nov-2024 08:53:39] WARNING: [pool www] child 27539 said into stderr: "sh: post: command not found"
+[22-Nov-2024 08:54:22] WARNING: [pool www] child 27538 said into stderr: "sh: post: command not found"
+[22-Nov-2024 08:55:50] WARNING: [pool www] child 27539 said into stderr: "sh: post: command not found"
+[22-Nov-2024 08:57:15] WARNING: [pool www] child 27538 said into stderr: "sh: post: command not found"
+[22-Nov-2024 08:58:33] WARNING: [pool www] child 27538 said into stderr: "sh: post: command not found"
