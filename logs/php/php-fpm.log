@@ -38,3 +38,8 @@
 [22-Nov-2024 08:55:50] WARNING: [pool www] child 27539 said into stderr: "sh: post: command not found"
 [22-Nov-2024 08:57:15] WARNING: [pool www] child 27538 said into stderr: "sh: post: command not found"
 [22-Nov-2024 08:58:33] WARNING: [pool www] child 27538 said into stderr: "sh: post: command not found"
+[22-Nov-2024 13:17:21] NOTICE: Terminating ...
+[22-Nov-2024 13:17:21] NOTICE: Terminating ...
+[22-Nov-2024 13:17:21] NOTICE: exiting, bye-bye!
+[25-Nov-2024 19:38:22] NOTICE: fpm is running, pid 698
+[25-Nov-2024 19:38:22] NOTICE: ready to handle connections
