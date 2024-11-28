@@ -40,10 +40,9 @@ class Search {
         this.isSpinnerVisible = false
       }
     }
-
     this.previousValue = this.searchField.val()
   }
-
+  
   getResults() {
     $.getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), results => {
       this.resultsDiv.html(`
@@ -76,7 +75,6 @@ class Search {
       this.isSpinnerVisible = false
     })
   }
-
   keyPressDispatcher(e) {
     if (e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is(":focus")) {
       this.openOverlay()
@@ -86,7 +84,6 @@ class Search {
       this.closeOverlay()
     }
   }
-
   openOverlay() {
     this.searchOverlay.addClass("search-overlay--active")
     $("body").addClass("body-no-scroll")
@@ -95,14 +92,12 @@ class Search {
     console.log("our open method just ran!")
     this.isOverlayOpen = true
   }
-
   closeOverlay() {
     this.searchOverlay.removeClass("search-overlay--active")
     $("body").removeClass("body-no-scroll")
     console.log("our close method just ran!")
     this.isOverlayOpen = false
   }
-
   addSearchHTML() {
     $("body").append(`
       <div class="search-overlay">
