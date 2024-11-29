@@ -40,9 +40,10 @@ class Search {
         this.isSpinnerVisible = false
       }
     }
+
     this.previousValue = this.searchField.val()
   }
-  
+
   getResults() {
     $.getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), results => {
       this.resultsDiv.html(`
@@ -60,6 +61,20 @@ class Search {
             ${results.programs.length ? "</ul>" : ""}
 
             <h2 class="search-overlay__section-title">Professors</h2>
+            ${results.professors.length ? '<ul class="professor-cards">' : `<p>No professors match that search.</p>`}
+              ${results.professors
+                .map(
+                  item => `
+                <li class="professor-card__list-item">
+                  <a class="professor-card" href="${item.permalink}">
+                    <img class="professor-card__image" src="${item.image}">
+                    <span class="professor-card__name">${item.title}</span>
+                  </a>
+                </li>
+              `
+                )
+                .join("")}
+            ${results.professors.length ? "</ul>" : ""}
 
           </div>
           <div class="one-third">
@@ -69,12 +84,31 @@ class Search {
             ${results.campuses.length ? "</ul>" : ""}
 
             <h2 class="search-overlay__section-title">Events</h2>
+            ${results.events.length ? "" : `<p>No events match that search. <a href="${universityData.root_url}/events">View all events</a></p>`}
+              ${results.events
+                .map(
+                  item => `
+                <div class="event-summary">
+                  <a class="event-summary__date t-center" href="${item.permalink}">
+                    <span class="event-summary__month">${item.month}</span>
+                    <span class="event-summary__day">${item.day}</span>  
+                  </a>
+                  <div class="event-summary__content">
+                    <h5 class="event-summary__title headline headline--tiny"><a href="${item.permalink}">${item.title}</a></h5>
+                    <p>${item.description} <a href="${item.permalink}" class="nu gray">Learn more</a></p>
+                  </div>
+                </div>
+              `
+                )
+                .join("")}
+
           </div>
         </div>
       `)
       this.isSpinnerVisible = false
     })
   }
+
   keyPressDispatcher(e) {
     if (e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is(":focus")) {
       this.openOverlay()
@@ -84,6 +118,7 @@ class Search {
       this.closeOverlay()
     }
   }
+
   openOverlay() {
     this.searchOverlay.addClass("search-overlay--active")
     $("body").addClass("body-no-scroll")
@@ -92,12 +127,14 @@ class Search {
     console.log("our open method just ran!")
     this.isOverlayOpen = true
   }
+
   closeOverlay() {
     this.searchOverlay.removeClass("search-overlay--active")
     $("body").removeClass("body-no-scroll")
     console.log("our close method just ran!")
     this.isOverlayOpen = false
   }
+
   addSearchHTML() {
     $("body").append(`
       <div class="search-overlay">
