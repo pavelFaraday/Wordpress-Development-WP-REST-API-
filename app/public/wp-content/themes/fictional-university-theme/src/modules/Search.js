@@ -43,7 +43,6 @@ class Search {
 
     this.previousValue = this.searchField.val()
   }
-
   getResults() {
     $.getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), results => {
       this.resultsDiv.html(`
