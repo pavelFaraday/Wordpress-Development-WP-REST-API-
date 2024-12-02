@@ -210,7 +210,6 @@ class Search {
     this.previousValue;
     this.typingTimer;
   }
-
   // 2. events
   events() {
     this.openButton.on("click", this.openOverlay.bind(this));
