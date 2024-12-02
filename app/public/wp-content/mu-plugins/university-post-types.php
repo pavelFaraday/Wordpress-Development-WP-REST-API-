@@ -28,7 +28,7 @@ function university_post_types() {
         'has_archive' => true,
         'menu-icon' => 'dashicons-awards',
         'rewrite' => array('slug' => 'programs'),
-        'supports' => array('title', 'editor'),
+        'supports' => array('title'),
         'labels' => array (
             'name' => __('Programs'),
             'add_new_item' => 'Add New Program',
