@@ -1,50 +1,60 @@
-import $ from "jquery"
+import axios from "axios"
 
 class Search {
   // 1. describe and create/initiate our object
   constructor() {
     this.addSearchHTML()
-    this.resultsDiv = $("#search-overlay__results")
-    this.openButton = $(".js-search-trigger")
-    this.closeButton = $(".search-overlay__close")
-    this.searchOverlay = $(".search-overlay")
-    this.searchField = $("#search-term")
-    this.events()
+    this.resultsDiv = document.querySelector("#search-overlay__results")
+    this.openButton = document.querySelectorAll(".js-search-trigger")
+    this.closeButton = document.querySelector(".search-overlay__close")
+    this.searchOverlay = document.querySelector(".search-overlay")
+    this.searchField = document.querySelector("#search-term")
     this.isOverlayOpen = false
     this.isSpinnerVisible = false
     this.previousValue
     this.typingTimer
+    this.events()
   }
+
   // 2. events
   events() {
-    this.openButton.on("click", this.openOverlay.bind(this))
-    this.closeButton.on("click", this.closeOverlay.bind(this))
-    $(document).on("keydown", this.keyPressDispatcher.bind(this))
-    this.searchField.on("keyup", this.typingLogic.bind(this))
+    this.openButton.forEach(el => {
+      el.addEventListener("click", e => {
+        e.preventDefault()
+        this.openOverlay()
+      })
+    })
+
+    this.closeButton.addEventListener("click", () => this.closeOverlay())
+    document.addEventListener("keydown", e => this.keyPressDispatcher(e))
+    this.searchField.addEventListener("keyup", () => this.typingLogic())
   }
 
   // 3. methods (function, action...)
   typingLogic() {
-    if (this.searchField.val() != this.previousValue) {
+    if (this.searchField.value != this.previousValue) {
       clearTimeout(this.typingTimer)
 
-      if (this.searchField.val()) {
+      if (this.searchField.value) {
         if (!this.isSpinnerVisible) {
-          this.resultsDiv.html('<div class="spinner-loader"></div>')
+          this.resultsDiv.innerHTML = '<div class="spinner-loader"></div>'
           this.isSpinnerVisible = true
         }
         this.typingTimer = setTimeout(this.getResults.bind(this), 750)
       } else {
-        this.resultsDiv.html("")
+        this.resultsDiv.innerHTML = ""
         this.isSpinnerVisible = false
       }
     }
 
-    this.previousValue = this.searchField.val()
+    this.previousValue = this.searchField.value
   }
-  getResults() {
-    $.getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), results => {
-      this.resultsDiv.html(`
+
+  async getResults() {
+    try {
+      const response = await axios.get(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.value)
+      const results = response.data
+      this.resultsDiv.innerHTML = `
         <div class="row">
           <div class="one-third">
             <h2 class="search-overlay__section-title">General Information</h2>
@@ -61,8 +71,8 @@ class Search {
             <h2 class="search-overlay__section-title">Professors</h2>
             ${results.professors.length ? '<ul class="professor-cards">' : `<p>No professors match that search.</p>`}
               ${results.professors
-                .map(
-                  item => `
+          .map(
+            item => `
                 <li class="professor-card__list-item">
                   <a class="professor-card" href="${item.permalink}">
                     <img class="professor-card__image" src="${item.image}">
@@ -70,8 +80,8 @@ class Search {
                   </a>
                 </li>
               `
-                )
-                .join("")}
+          )
+          .join("")}
             ${results.professors.length ? "</ul>" : ""}
 
           </div>
@@ -84,8 +94,8 @@ class Search {
             <h2 class="search-overlay__section-title">Events</h2>
             ${results.events.length ? "" : `<p>No events match that search. <a href="${universityData.root_url}/events">View all events</a></p>`}
               ${results.events
-                .map(
-                  item => `
+          .map(
+            item => `
                 <div class="event-summary">
                   <a class="event-summary__date t-center" href="${item.permalink}">
                     <span class="event-summary__month">${item.month}</span>
@@ -97,18 +107,20 @@ class Search {
                   </div>
                 </div>
               `
-                )
-                .join("")}
+          )
+          .join("")}
 
           </div>
         </div>
-      `)
+      `
       this.isSpinnerVisible = false
-    })
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   keyPressDispatcher(e) {
-    if (e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is(":focus")) {
+    if (e.keyCode == 83 && !this.isOverlayOpen && document.activeElement.tagName != "INPUT" && document.activeElement.tagName != "TEXTAREA") {
       this.openOverlay()
     }
 
@@ -118,23 +130,26 @@ class Search {
   }
 
   openOverlay() {
-    this.searchOverlay.addClass("search-overlay--active")
-    $("body").addClass("body-no-scroll")
-    this.searchField.val("")
+    this.searchOverlay.classList.add("search-overlay--active")
+    document.body.classList.add("body-no-scroll")
+    this.searchField.value = ""
     setTimeout(() => this.searchField.focus(), 301)
     console.log("our open method just ran!")
     this.isOverlayOpen = true
+    return false
   }
 
   closeOverlay() {
-    this.searchOverlay.removeClass("search-overlay--active")
-    $("body").removeClass("body-no-scroll")
+    this.searchOverlay.classList.remove("search-overlay--active")
+    document.body.classList.remove("body-no-scroll")
     console.log("our close method just ran!")
     this.isOverlayOpen = false
   }
 
   addSearchHTML() {
-    $("body").append(`
+    document.body.insertAdjacentHTML(
+      "beforeend",
+      `
       <div class="search-overlay">
         <div class="search-overlay__top">
           <div class="container">
@@ -149,7 +164,8 @@ class Search {
         </div>
 
       </div>
-    `)
+    `
+    )
   }
 }
 
