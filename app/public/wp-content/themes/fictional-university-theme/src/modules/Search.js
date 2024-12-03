@@ -71,8 +71,8 @@ class Search {
             <h2 class="search-overlay__section-title">Professors</h2>
             ${results.professors.length ? '<ul class="professor-cards">' : `<p>No professors match that search.</p>`}
               ${results.professors
-          .map(
-            item => `
+                .map(
+                  item => `
                 <li class="professor-card__list-item">
                   <a class="professor-card" href="${item.permalink}">
                     <img class="professor-card__image" src="${item.image}">
@@ -80,8 +80,8 @@ class Search {
                   </a>
                 </li>
               `
-          )
-          .join("")}
+                )
+                .join("")}
             ${results.professors.length ? "</ul>" : ""}
 
           </div>
@@ -94,8 +94,8 @@ class Search {
             <h2 class="search-overlay__section-title">Events</h2>
             ${results.events.length ? "" : `<p>No events match that search. <a href="${universityData.root_url}/events">View all events</a></p>`}
               ${results.events
-          .map(
-            item => `
+                .map(
+                  item => `
                 <div class="event-summary">
                   <a class="event-summary__date t-center" href="${item.permalink}">
                     <span class="event-summary__month">${item.month}</span>
@@ -107,8 +107,8 @@ class Search {
                   </div>
                 </div>
               `
-          )
-          .join("")}
+                )
+                .join("")}
 
           </div>
         </div>
