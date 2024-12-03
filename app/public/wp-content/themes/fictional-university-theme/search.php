@@ -1,5 +1,4 @@
 <?php
-
 get_header();
 pageBanner(array(
   'title' => 'Search Results',
@@ -18,13 +17,8 @@ pageBanner(array(
   } else {
     echo '<h2 class="headline headline--small-plus">No results match that search.</h2>';
   }
-
   get_search_form();
-  
 ?>
-
 </div>
 
-<?php get_footer();
-
-?>
+<?php get_footer();?>
