@@ -63,7 +63,9 @@ function university_adjust_queries ($query) {
 }
 add_action('pre_get_posts', 'university_adjust_queries');
 
-// Redirect subscriber accounts out of admin and onto homepage
+ /* -------------------------------------------------------------------------- */
+ /*         Redirect subscriber accounts out of admin and onto homepage        */
+ /* -------------------------------------------------------------------------- */
 function redirectSubsToFrontend() {
   $ourCurrentUser = wp_get_current_user();
   if (count($ourCurrentUser->roles) == 1 AND $ourCurrentUser->roles[0] == 'subscriber') {
@@ -81,7 +83,31 @@ function noSubsAdminBar() {
 }
 add_action('wp_loaded', 'noSubsAdminBar');
 
-// Reusable Code
+/* -------------------------------------------------------------------------- */
+/*                             Customize Login Screen                         */
+/* -------------------------------------------------------------------------- */
+function ourHeaderUrl() {
+  return esc_url(site_url('/'));
+}
+add_filter('login_headerurl', 'ourHeaderUrl');
+
+function ourLoginCSS() {
+  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
+  wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/style-index.css'));
+  wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
+}
+add_action('login_enqueue_scripts', 'ourLoginCSS');
+
+function ourLoginTitle() {
+  return get_bloginfo('name');
+}
+add_filter('login_headertitle', 'ourLoginTitle');
+
+
+ /* -------------------------------------------------------------------------- */
+ /*                                Reusable Code                               */
+ /* -------------------------------------------------------------------------- */
 function pageBanner ($args = NULL) { 
   if (!isset($args['title'])) {
     $args['title'] = get_the_title();
