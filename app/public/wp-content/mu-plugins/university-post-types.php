@@ -11,6 +11,7 @@ function university_post_types() {
             'rewrite' => array('slug' => 'events'),
             'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
             'capability_type' => 'event',
+            'map_meta_cap' => true,
             'labels' => array (
                 'name' => __('Events'),
                 'add_new_item' => 'Add New Event',
