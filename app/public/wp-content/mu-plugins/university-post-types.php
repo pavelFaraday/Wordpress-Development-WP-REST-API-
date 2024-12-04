@@ -10,6 +10,7 @@ function university_post_types() {
             'has_archive' => true,
             'rewrite' => array('slug' => 'events'),
             'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+            'capability_type' => 'event',
             'labels' => array (
                 'name' => __('Events'),
                 'add_new_item' => 'Add New Event',

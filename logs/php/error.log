@@ -7,3 +7,4 @@ Stack trace:
 #4 /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/giorgiep...')
 #5 {main}
   thrown in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-includes/plugin.php on line 441
+[04-Dec-2024 07:36:18 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "labels", expecting ")" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-content/mu-plugins/university-post-types.php on line 14
