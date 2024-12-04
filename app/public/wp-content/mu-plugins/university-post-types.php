@@ -68,6 +68,8 @@ function university_post_types() {
           'has_archive' => true,
           'rewrite' => array('slug' => 'campuses'),
           'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+          'capability_type' => 'campus',
+          'map_meta_cap' => true,
           'labels' => array (
             'name' => __('Campuses'),
             'add_new_item' => 'Add New Campus',
