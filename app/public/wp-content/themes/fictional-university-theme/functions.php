@@ -16,9 +16,10 @@ function university_files() {
   wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
 
   wp_localize_script('main-university-js', 'universityData', array(
-    'root_url' => get_site_url()
+    'root_url' => get_site_url(),
+    'nonce' => wp_create_nonce('wp_rest')
   ));
-  // OUTPUT in Page Source: --var universityData = {"root_url":"http:\/\/localhost:10033"};--
+  // OUTPUT: var universityData = {"root_url":"http:\/\/localhost:10033","nonce":"4950779cbc"};
 }
 add_action('wp_enqueue_scripts', 'university_files');
 
