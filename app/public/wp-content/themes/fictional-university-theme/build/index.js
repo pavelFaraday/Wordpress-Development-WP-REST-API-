@@ -2263,7 +2263,18 @@ class MyNotes {
   }
   // Methods
   deleteNote() {
-    alert("Delete Note?");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
+      url: universityData.root_url + '/wp-json/wp/v2/note/97',
+      type: 'DELETE',
+      success: response => {
+        console.log("Congrats");
+        console.log(response);
+      },
+      error: response => {
+        console.log("Error");
+        console.log(response);
+      }
+    });
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyNotes);

@@ -9,7 +9,18 @@ class MyNotes {
     }
     // Methods
     deleteNote(){
-        alert("Delete Note?");
+        $.ajax({
+            url: universityData.root_url + '/wp-json/wp/v2/note/97',
+            type: 'DELETE',
+            success: (response) => {
+                console.log("Congrats");
+                console.log(response);
+            },
+            error: (response) => {
+                console.log("Error");
+                console.log(response);
+            }
+        });
     }
 }
 
