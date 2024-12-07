@@ -2265,6 +2265,7 @@ class MyNotes {
   // Methods
   editNote(e) {
     var thisNote = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).parents("li");
+    thisNote.find(".edit-note").html('<i class="fa fa-times" aria-hidden="true"></i> Cancel');
     thisNote.find(".note-title-field, .note-body-field").removeAttr("readonly").addClass("note-active-field");
     thisNote.find(".update-note").addClass("update-note--visible");
   }
