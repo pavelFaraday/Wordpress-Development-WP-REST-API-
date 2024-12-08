@@ -2259,9 +2259,9 @@ class MyNotes {
     this.events();
   }
   events() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".delete-note").on("click", this.deleteNote);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".edit-note").on("click", this.editNote.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".update-note").on("click", this.updateNote.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#my-notes").on("click", ".delete-note", this.deleteNote);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#my-notes").on("click", ".edit-note", this.editNote.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#my-notes").on("click", ".update-note", this.updateNote.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".submit-note").on("click", this.createNote.bind(this));
   }
   // Methods
@@ -2351,7 +2351,7 @@ class MyNotes {
                       <textarea readonly class="note-body-field">${response.content.raw}</textarea>
                       <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
                     </li>
-                    `).prependTo("#my-notes").hide().slideDown();
+                `).prependTo("#my-notes").hide().slideDown();
         console.log("Congrats");
         console.log(response);
       },

@@ -5,9 +5,9 @@ class MyNotes {
         this.events();
     }
     events(){
-        $(".delete-note").on("click", this.deleteNote);
-        $(".edit-note").on("click", this.editNote.bind(this));
-        $(".update-note").on("click", this.updateNote.bind(this));
+        $("#my-notes").on("click", ".delete-note", this.deleteNote);
+        $("#my-notes").on("click", ".edit-note", this.editNote.bind(this));
+        $("#my-notes").on("click", ".update-note", this.updateNote.bind(this));
         $(".submit-note").on("click", this.createNote.bind(this));
     }
     // Methods
@@ -99,7 +99,7 @@ class MyNotes {
                       <textarea readonly class="note-body-field">${response.content.raw}</textarea>
                       <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
                     </li>
-                    `)
+                `)
                     .prependTo("#my-notes")
                     .hide()
                     .slideDown()
