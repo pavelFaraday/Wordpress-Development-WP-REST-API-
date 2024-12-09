@@ -86,6 +86,8 @@ function university_post_types() {
     'supports' => array('title', 'editor'),
     'public' => false,
     'show_ui' => true,
+    'capability_type' => 'note',
+    'map_meta_cap' => true,
     'labels' => array(
       'name' => 'Notes',
       'add_new_item' => 'Add New Note',
