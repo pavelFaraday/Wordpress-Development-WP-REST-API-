@@ -8,3 +8,6 @@ Stack trace:
 #5 {main}
   thrown in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-includes/plugin.php on line 441
 [04-Dec-2024 07:36:18 UTC] PHP Parse error:  syntax error, unexpected single-quoted string "labels", expecting ")" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-content/mu-plugins/university-post-types.php on line 14
+[09-Dec-2024 08:32:26 UTC] PHP Parse error:  syntax error, unexpected token ")" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-content/themes/fictional-university-theme/functions.php on line 113
+[09-Dec-2024 08:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[09-Dec-2024 08:32:26 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
