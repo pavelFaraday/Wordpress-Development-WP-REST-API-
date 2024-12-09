@@ -2301,6 +2301,9 @@ class MyNotes {
       error: response => {
         console.log("Error");
         console.log(response);
+        if (response.userNoteCount < 5) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".note-limit-message").removeClass("active");
+        }
       }
     });
   }

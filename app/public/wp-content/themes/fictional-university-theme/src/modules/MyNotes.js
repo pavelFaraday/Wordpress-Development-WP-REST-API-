@@ -48,6 +48,9 @@ class MyNotes {
             error: (response) => {
                 console.log("Error");
                 console.log(response);
+                if (response.userNoteCount < 5) {
+                    $(".note-limit-message").removeClass("active");
+                }
             }
         });
     }
