@@ -2330,33 +2330,36 @@ class MyNotes {
   }
   createNote(e) {
     var ourNewPost = {
-      'title': jquery__WEBPACK_IMPORTED_MODULE_0___default()(".new-note-title").val(),
-      'content': jquery__WEBPACK_IMPORTED_MODULE_0___default()(".new-note-body").val(),
+      "title": jquery__WEBPACK_IMPORTED_MODULE_0___default()(".new-note-title").val(),
+      "content": jquery__WEBPACK_IMPORTED_MODULE_0___default()(".new-note-body").val(),
       "status": "publish"
     };
     jquery__WEBPACK_IMPORTED_MODULE_0___default().ajax({
       beforeSend: xhr => {
-        xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+        xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
       },
-      url: universityData.root_url + '/wp-json/wp/v2/note/',
-      type: 'POST',
+      url: universityData.root_url + "/wp-json/wp/v2/note/",
+      type: "POST",
       data: ourNewPost,
       success: response => {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".new-note-title, .new-note-body").val('');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(".new-note-title, .new-note-body").val("");
         jquery__WEBPACK_IMPORTED_MODULE_0___default()(`
-                    <li data-id="${response.id}">
-                      <input readonly class="note-title-field" value="${response.title.raw}">
-                      <span class="edit-note"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
-                      <span class="delete-note"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
-                      <textarea readonly class="note-body-field">${response.content.raw}</textarea>
-                      <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
-                    </li>
-                `).prependTo("#my-notes").hide().slideDown();
+              <li data-id="${response.id}">
+                <input readonly class="note-title-field" value="${response.title.raw}">
+                <span class="edit-note"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
+                <span class="delete-note"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
+                <textarea readonly class="note-body-field">${response.content.raw}</textarea>
+                <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
+              </li>
+              `).prependTo("#my-notes").hide().slideDown();
         console.log("Congrats");
         console.log(response);
       },
       error: response => {
-        console.log("Error");
+        if (response.responseText == "\n\n\nYou have reached your note limit.") {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".note-limit-message").addClass("active");
+        }
+        console.log("Sorry");
         console.log(response);
       }
     });
