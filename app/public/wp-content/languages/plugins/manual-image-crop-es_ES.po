@@ -1,0 +1,205 @@
+# Translation of Plugins - Manual Image Crop - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Manual Image Crop - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-18 20:22:52+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Manual Image Crop - Stable (latest release)\n"
+
+#: lib/ManualImageCrop.php:58
+msgid "Crop"
+msgstr "Recortar"
+
+#: lib/ManualImageCrop.php:67
+msgid "Crop featured image"
+msgstr "Recortar Imagen destacada"
+
+#: lib/ManualImageCrop.php:94 lib/ManualImageCrop.php:104
+#: lib/ManualImageCrop.php:131
+msgid "Crop Image"
+msgstr "Recortar Imagen"
+
+#: lib/ManualImageCropEditorWindow.php:31
+msgid "Pick the image size:"
+msgstr "Elija el tamaño correcto:"
+
+#: lib/ManualImageCropEditorWindow.php:45
+#: lib/ManualImageCropSettingsPage.php:134
+msgid "Medium"
+msgstr "Mediano"
+
+#: lib/ManualImageCropEditorWindow.php:46
+#: lib/ManualImageCropSettingsPage.php:135
+msgid "Large"
+msgstr "Grande"
+
+#: lib/ManualImageCropEditorWindow.php:47
+#: lib/ManualImageCropSettingsPage.php:136
+msgid "Full Size"
+msgstr "Tamaño Completo "
+
+#: lib/ManualImageCropEditorWindow.php:166
+msgid "Original picture dimensions:"
+msgstr "Dimensiones originales de la imagen"
+
+#: lib/ManualImageCropEditorWindow.php:168
+msgid "Target picture dimensions:"
+msgstr "Dimensiones de imagen objetivo"
+
+#: lib/ManualImageCropEditorWindow.php:174
+msgid "Soft proportional crop mode"
+msgstr "Modo de recorte suave proporcional"
+
+#: lib/ManualImageCropEditorWindow.php:175
+msgid "Hard crop mode"
+msgstr "Modo de recorte duro "
+
+#: lib/ManualImageCropEditorWindow.php:181
+msgid "New image:"
+msgstr "Nueva Imagen:"
+
+#: lib/ManualImageCropEditorWindow.php:190
+msgid "Previous image:"
+msgstr "Imagen Anterior:"
+
+#: lib/ManualImageCropEditorWindow.php:199
+msgid "Crop it!"
+msgstr "¡Recórtala!"
+
+#: lib/ManualImageCropEditorWindow.php:207
+msgid "Target JPEG Quality"
+msgstr "Calidad de JPEG Objetivo"
+
+#: lib/ManualImageCropEditorWindow.php:208
+#: lib/ManualImageCropSettingsPage.php:175
+msgid "100 (best quality, biggest file)"
+msgstr "100 (mejor calidad, archivo más grande)"
+
+#: lib/ManualImageCropEditorWindow.php:209
+#: lib/ManualImageCropSettingsPage.php:176
+msgid "80 (very high quality)"
+msgstr "80 (muy alta calidad)"
+
+#: lib/ManualImageCropEditorWindow.php:210
+#: lib/ManualImageCropSettingsPage.php:177
+msgid "70 (high quality)"
+msgstr "70 (alta calidad)"
+
+#: lib/ManualImageCropEditorWindow.php:211
+#: lib/ManualImageCropSettingsPage.php:178
+msgid "60 (good)"
+msgstr "60 (buena)"
+
+#: lib/ManualImageCropEditorWindow.php:212
+#: lib/ManualImageCropSettingsPage.php:179
+msgid "50 (average)"
+msgstr "50 (promedio)"
+
+#: lib/ManualImageCropEditorWindow.php:213
+#: lib/ManualImageCropSettingsPage.php:180
+msgid "30 (low)"
+msgstr "30 (baja)"
+
+#: lib/ManualImageCropEditorWindow.php:214
+#: lib/ManualImageCropSettingsPage.php:181
+msgid "10 (very low, smallest file)"
+msgstr "10 (muy baja, archivo más pequeño)"
+
+#: lib/ManualImageCropEditorWindow.php:223
+msgid "Generate Retina/HiDPI (@2x):"
+msgstr "Generar Retina/HiDPI (@2x):"
+
+#: lib/ManualImageCropEditorWindow.php:230
+msgid "The image has been cropped successfully"
+msgstr "La imagen ha sido recortada con éxito"
+
+#: lib/ManualImageCropEditorWindow.php:234
+msgid "An Error has occured. Please try again or contact plugin's author."
+msgstr "Ha ocurrido un Error. Por favor inténtelo de nuevp o contacte al autor del plugin."
+
+#: lib/ManualImageCropEditorWindow.php:278
+msgid "Compatible"
+msgstr "Compatible"
+
+#: lib/ManualImageCropEditorWindow.php:280
+msgid "Source too small"
+msgstr "Fuente demasiado pequeña"
+
+#: lib/ManualImageCropSettingsPage.php:143
+msgid "Size"
+msgstr "Tamaño"
+
+#: lib/ManualImageCropSettingsPage.php:144
+msgid "Visible"
+msgstr "Visible"
+
+#: lib/ManualImageCropSettingsPage.php:145
+msgid "Default JPEG Quality"
+msgstr "Calidad JPEG Predeterminada"
+
+#: lib/ManualImageCropSettingsPage.php:146
+msgid "Custom Label"
+msgstr "Etiqueta Personalizada"
+
+#: lib/ManualImageCropSettingsPage.php:171
+msgid "Yes"
+msgstr "Sí"
+
+#: lib/ManualImageCropSettingsPage.php:172
+msgid "No"
+msgstr "No"
+
+#: manual-image-crop.php:68
+msgid "Settings"
+msgstr "Configurar"
+
+#. Description of the plugin/theme
+msgid "Plugin allows you to manually crop all the image sizes registered in your WordPress theme (in particular featured image). Simply click on the \"Crop\" link next to any image in your media library and select the area of the image you want to crop."
+msgstr "Este plugin te permite recortar todos los tamaños de imágenes registrados por tu tema de WordPress. Simplemente haz click en el enlace «Recortar» de cualquier imagen de tu biblioteca de medios y selecciona el área de la imagen que quieres recortar."
+
+#: lib/ManualImageCropSettingsPage.php:120
+msgid "Enter your settings below:"
+msgstr "Introduce tus ajustes a continuación:"
+
+#: lib/ManualImageCropSettingsPage.php:94
+msgid "Crop sizes settings"
+msgstr "Ajustes de tamaño de recorte"
+
+#: lib/ManualImageCropSettingsPage.php:45
+#: lib/ManualImageCropSettingsPage.php:61
+msgid "Manual Image Crop Settings"
+msgstr "Ajustes de recorte manual"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/tomaszsita"
+msgstr "https://github.com/tomaszsita"
+
+#. Author of the plugin/theme
+msgid "Tomasz Sita"
+msgstr "Tomasz Sita"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/tomaszsita/wp-manual-image-crop"
+msgstr "https://github.com/tomaszsita/wp-manual-image-crop"
+
+#: lib/ManualImageCropSettingsPage.php:87
+msgid "Mic Custom Settings"
+msgstr "Ajustes personalizados de Mic"
+
+#. #-#-#-#-#  tmp-manual-image-crop.pot (Manual Image Crop 1.12)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lib/ManualImageCrop.php:67 lib/ManualImageCrop.php:94
+#: lib/ManualImageCrop.php:104 lib/ManualImageCrop.php:131
+#: lib/ManualImageCropSettingsPage.php:46
+msgid "Manual Image Crop"
+msgstr "Manual Image Crop"
+
+#: lib/ManualImageCropEditorWindow.php:44
+#: lib/ManualImageCropSettingsPage.php:133
+msgid "Thumbnail"
+msgstr "Miniatura"
