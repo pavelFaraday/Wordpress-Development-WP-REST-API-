@@ -11,6 +11,7 @@
             <?php the_post_thumbnail('professorPortrait'); ?>
           </div>
 
+          <!-- likes -->
           <div class="two-thirds">
             <?php
               $likeCount = new WP_Query(array(
