@@ -10,10 +10,11 @@
 
 add_filter('the_content', 'addToEndOfPost');
 
+
+// $content will be added at the end of all Posts
 function addToEndOfPost($content) {
   if (is_page() && is_main_query()) {
     return $content . '<p>My name is Brad.</p>';
   }
-
   return $content;
 }
