@@ -12,6 +12,23 @@ class WordCountAndTimePlugin {
   function __construct() {
     add_action('admin_menu', array($this, 'adminPage'));
     add_action('admin_init', array($this, 'settings'));
+    add_filter('the_content', array($this, 'ifWrap'));
+  }
+
+  function ifWrap($content) {
+    if ((is_main_query() AND is_single()) AND
+     (
+      get_option('wcp_wordcount', 1) OR 
+      get_option('wcp_charactercount', 1) OR 
+      get_option('wcp_readtime', 1)
+    )) {
+      return $this->createHTML($content);
+    }
+    return $content;
+  }
+
+  function createHTML($content) {
+    return $content . " Hello. ";
   }
 
   function settings() {
