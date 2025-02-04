@@ -232,3 +232,6 @@ Stack trace:
 #7 /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/giorgiep...')
 #8 {main}
   thrown in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-includes/l10n.php on line 998
+[04-Feb-2025 09:23:22 UTC] PHP Warning:  Undefined array key "justsubmitted" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-content/plugins/our-word-filter-plugin/index.php on line 45
+[04-Feb-2025 09:51:53 UTC] PHP Warning:  Undefined array key "justsubmitted" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-content/plugins/our-word-filter-plugin/index.php on line 45
+[04-Feb-2025 09:52:31 UTC] PHP Warning:  Undefined array key "justsubmitted" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-content/plugins/our-word-filter-plugin/index.php on line 45
