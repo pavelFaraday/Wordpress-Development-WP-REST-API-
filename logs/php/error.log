@@ -235,3 +235,4 @@ Stack trace:
 [04-Feb-2025 09:23:22 UTC] PHP Warning:  Undefined array key "justsubmitted" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-content/plugins/our-word-filter-plugin/index.php on line 45
 [04-Feb-2025 09:51:53 UTC] PHP Warning:  Undefined array key "justsubmitted" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-content/plugins/our-word-filter-plugin/index.php on line 45
 [04-Feb-2025 09:52:31 UTC] PHP Warning:  Undefined array key "justsubmitted" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-content/plugins/our-word-filter-plugin/index.php on line 45
+[07-Feb-2025 06:24:03 UTC] PHP Warning:  Undefined array key "justsubmitted" in /Users/giorgiepitashvili/Local Sites/wordpress-development-wp-rest-api--master/app/public/wp-content/plugins/our-word-filter-plugin/index.php on line 64
