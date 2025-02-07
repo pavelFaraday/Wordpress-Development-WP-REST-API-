@@ -128,15 +128,7 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
     });
   },
   save: function (props) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-      children: ["Today the sky is ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
-        className: "skyColor",
-        children: props.attributes.skyColor
-      }), " and the grass is ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
-        className: "grassColor",
-        children: props.attributes.grassColor
-      }), "."]
-    });
+    return null;
   }
 });
 })();
