@@ -117,10 +117,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(function () {
+(() => {
   let locked = false;
-  wp.data.subscribe(function () {
-    const results = wp.data.select("core/block-editor").getBlocks().filter(function (block) {
+  wp.data.subscribe(() => {
+    const results = wp.data.select("core/block-editor").getBlocks().filter(block => {
       return block.name == "ourplugin/are-you-paying-attention" && block.attributes.correctAnswer == undefined;
     });
     if (results.length && locked == false) {

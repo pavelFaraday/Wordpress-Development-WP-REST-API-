@@ -1,19 +1,16 @@
 import "./index.scss"
 import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon} from "@wordpress/components"
 
-(function() {
+(() => {
   let locked = false
-  
-  wp.data.subscribe(function() {
-    const results = wp.data.select("core/block-editor").getBlocks().filter(function(block) {
+  wp.data.subscribe(() => {
+    const results = wp.data.select("core/block-editor").getBlocks().filter((block) => {
       return block.name == "ourplugin/are-you-paying-attention" && block.attributes.correctAnswer == undefined
     })
-
     if (results.length && locked == false) {
       locked = true
       wp.data.dispatch("core/editor").lockPostSaving("noanswer")
     }
-
     if (!results.length && locked) {
       locked = false
       wp.data.dispatch("core/editor").unlockPostSaving("noanswer")
@@ -37,11 +34,9 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
 })
 
 function EditComponent (props) {
-  
   function updateQuestion(value) {
     props.setAttributes({question: value})
   }
-
   function deleteAnswer(indexToDelete) {
     const newAnswers = props.attributes.answers.filter(function(x, index) {
       return index != indexToDelete
@@ -52,7 +47,6 @@ function EditComponent (props) {
       props.setAttributes({correctAnswer: undefined})
     }
   }
-
   function markAsCorrect(index) {
     props.setAttributes({correctAnswer: index})
   }
