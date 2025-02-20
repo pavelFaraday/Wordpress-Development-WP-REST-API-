@@ -5,7 +5,7 @@
   background-color: #ebebeb;
   overflow: hidden;
   position: relative;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.03);
   border: 1px solid #dbdbdb;
   padding: 20px;
   border-radius: 4px;
@@ -21,7 +21,7 @@
 }
 @media screen and (min-width: 767px) {
   .paying-attention-frontend ul {
-    margin: 0 -20px 0 0;
+    margin: 0 0 0 -20px;
     display: flex;
   }
 }
@@ -39,7 +39,7 @@
 }
 @media screen and (min-width: 767px) {
   .paying-attention-frontend li {
-    margin: 0 20px 0 0;
+    margin: 0 0 0 20px;
   }
 }
 .paying-attention-frontend li:hover {
@@ -47,7 +47,7 @@
 }
 .paying-attention-frontend li svg {
   fill: rgb(0, 158, 47);
-  margin-right: 5px;
+  margin-left: 5px;
   margin-bottom: -5px;
 }
 .paying-attention-frontend .no-click {
@@ -72,8 +72,8 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
+  left: 0;
   background-color: rgb(156, 226, 177);
   opacity: 0;
   visibility: hidden;
@@ -87,7 +87,7 @@
 }
 .paying-attention-frontend .correct-message svg,
 .paying-attention-frontend .incorrect-message svg {
-  margin-right: 12px;
+  margin-left: 12px;
 }
 .paying-attention-frontend .correct-message p,
 .paying-attention-frontend .incorrect-message p {
@@ -119,5 +119,3 @@
     transform: scale(1.2);
   }
 }
-
-/*# sourceMappingURL=frontend.css.map*/

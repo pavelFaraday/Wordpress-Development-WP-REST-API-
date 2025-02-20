@@ -14,7 +14,7 @@
   transition: transform 0.3s ease-out;
 }
 .paying-attention-edit-block .mark-as-correct:hover {
-  transform: scale(1.25) rotate(12deg);
+  transform: scale(1.25) rotate(-12deg);
 }
 .paying-attention-edit-block .attention-delete {
   color: #ff0000;
@@ -24,5 +24,3 @@
 .paying-attention-edit-block .attention-delete:hover {
   color: #c20000 !important;
 }
-
-/*# sourceMappingURL=index.css.map*/
